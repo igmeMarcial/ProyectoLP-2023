@@ -1,75 +1,123 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./css/style.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<title>Login</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link
+	  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+	  rel="stylesheet"
+	/>
+	<!-- Google Fonts -->
+	<link
+	  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+	  rel="stylesheet"
+	/>
+	<link
+	  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+	  rel="stylesheet"
+	/>
+	<title>SomosNGR</title>
+	<link rel="stylesheet" type="text/css" href="./css/login.css" />
 </head>
-<body style="background-color: '#f7f9fb'" class="my-login-page">
-	<section class="h-100">
-		<div class="container h-100">
-			<div class="row justify-content-md-center h-100">
-				<div class="card-wrapper">
-					<div class="brand">
-						<img src="./img/user.png">
-					</div>
-					<div class="card fat">
-						<div class="card-body">
-							<h4 class="card-title">Iniciar Sesión</h4>
-							<form method="POST" class="my-login-validation" novalidate="">
-								<div class="form-group">
-									<label for="email">E-Mail Usuario</label>
-									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
-									<div class="invalid-feedback">
-										Email is invalido
-									</div>
-								</div>
+<body>
+<section class="vh-100">
+  	<div class="container-fluid p-0">
+    <div class="row-login vh-100 ">
+	   <div class="w-100 img-login  text-center">
+	        <img src="./img/DSC_0005.webp"
+	          alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: center;">
+	   </div>
+      <div class="text-black">
 
-								<div class="form-group">
-									<label for="password">Contraseña
-										<a href="forgot.html" class="float-right">
-											¿Olvidó su contraseña?
-										</a>
-									</label>
-									<input id="password" type="password" class="form-control" name="password" required data-eye>
-								    <div class="invalid-feedback">
-								    	Password es requerido
-							    	</div>
-								</div>
+        <div class="px-5 text-center mb-5">
+          <img alt="logo" class="logo-app mt-4 mb-4  ng-lazyloaded" src="./img/logo-somosngr.svg">
+        </div>
 
-								<div class="form-group">
-									<div class="custom-checkbox custom-control">
-										<input type="checkbox" name="remember" id="remember" class="custom-control-input">
-										<label for="remember" class="custom-control-label">Acuérdate de mí</label>
-									</div>
-								</div>
+        <div class="d-flex align-items-center justify-content-center h-custom-2 px-5  mt-5 pt-5 pt-xl-0  ">
 
-								<div class="form-group m-0">
-									<button type="submit" class="btn btn-primary btn-block">
-										Login
-									</button>
-								</div>
-								<div class="mt-4 text-center">
-									¿No tienes una cuenta? <a href="register.html">Crear uno</a>
-								</div>
-							</form>
-						</div>
-					</div>
-					<div class="footer">
-						Copyright &copy; 2023 &mdash; igme S.A.C
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<script src="./script/test.js" type="text/javascript"></script>
-	
+          <form style="width: 20rem;">
+
+            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;"></h3>
+
+            <div class="form-outline mb-4">
+              <input type="email" id="input-custom" class="form-control form-control-lg " />
+              <label class="form-label" for="form2Example18">Número de Documento</label>
+            </div>
+
+            <div class="form-outline mb-5">
+              <input type="password" id="input-custom" class="form-control form-control-lg nput-custom"" />
+              <label class="form-label" for="form2Example28">Contraseña</label>
+            </div>
+
+            <div class="pt-1 mb-4">
+              <button class="btn  btn-lg btn-block btn-login" type="submit">Ingresar</button>
+            </div>
+
+            <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Olvidé mi contraseña?</a></p>
+            <p class="createNewLink">Aún no tienes una cuenta?<a href="#!" class="link-info"> Registrarse Aqui!</a></p>
+
+          </form>
+
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+  
+</section>
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
+></script>
+    
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

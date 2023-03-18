@@ -37,17 +37,19 @@ h6 {
 /*--------------------------------------------------------------
 # Main
 --------------------------------------------------------------*/
-#main {
+
+.main {	
   margin-top: 60px;
   padding: 20px 30px;
   transition: all 0.3s;
 }
 
 @media (max-width: 1199px) {
-  #main {
+  .main {
     padding: 20px;
   }
-}/*--------------------------------------------------------------
+}
+/*--------------------------------------------------------------
 # Page Title
 --------------------------------------------------------------*/
 .pagetitle {
@@ -378,9 +380,15 @@ h6 {
   }
 }
 
+
 .logo img {
-  max-height: 26px;
+  max-height: 40px;
   margin-right: 6px;
+  
+}
+.logo .logoImg2{
+	display: none;
+	
 }
 
 .logo span {
@@ -405,7 +413,7 @@ h6 {
   font-size: 32px;
   padding-left: 10px;
   cursor: pointer;
-  color:#1f1c2e;
+  color: #f08d33;
 }
 
 .header .search-bar {
@@ -969,6 +977,7 @@ h6 {
   border-radius: 5px;
   max-width: 60px;
 }
+
 
 /*--------------------------------------------------------------
 # Productos

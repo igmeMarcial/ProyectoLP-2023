@@ -58,9 +58,9 @@ border-bottom-right-radius: .3rem;
               <div class="card-body p-md-5 mx-md-4">
 
                 <div class="text-center">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                  <img src="https://somosngr.com.pe/assets/images/logo-somosngr.svg"
                     style="width: 185px;" alt="logo">
-                  <h4 class="mt-1 mb-5 pb-1">Grupo oneXd</h4>
+                  <h4 class="mt-1 mb-5 pb-1"></h4>
                 </div>
 
                 <form>

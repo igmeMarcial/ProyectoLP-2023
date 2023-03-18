@@ -1,32 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./css/main.css" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-<title>Principal</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./css/mainPrincipal.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/main.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<title>Principal</title>
 </head>
 <body>
-	 <!-- ======= Header(Cabezera) ======= -->
-<header id="header" class="header fixed-top d-flex align-items-center">
+	<!-- ======= Header(Cabezera) ======= -->
+	<header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
-        <img src="./img/user.png" alt="">
-        <span class="d-none d-lg-block">GRUPO S.A.C</span>
-      </a>
-      <i class="ri-menu-fill toggle-sidebar-btn"></i>
+        <img class="logoImg1 d-none d-lg-block" src="./img/logo-somosngr.svg" alt="">
+        <img class="logoImg2 d-block d-lg-none" src="./img/logo-ngr.png" alt="">
+        <span class="d-none d-lg-block"></span>
+      </a>     
+      <i class="ri-menu-line toggle-sidebar-btn""></i>
     </div>
     <!-- Fin Logo -->
 		<!-- Input para Buscar jeje-->
-    <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
+    <div class="search-bar ">
+      <form class="search-form d-flex align-items-center my-auto" method="POST" action="#">
         <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
         <button type="submit" title="Buscar"><i class="ri-search-line"></i></button>
       </form>
@@ -77,7 +81,7 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="./img/user.png" alt="Profile" class="rounded-circle">
+            <img src="./img/userImg.png" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">M. Igme</span>
           </a><!-- End Profile Iamge Icon -->
 
@@ -134,6 +138,8 @@
     </nav><!-- Final Icons Navigation -->
 
 </header>
+
+
 <!-- Final Header -->
 <aside id="sidebar" class="sidebar">
 
@@ -313,12 +319,16 @@
       </li>
     </ul>
 
-</aside><!-- Final Sidebar-->
+</aside>
+
+<!-- Final Sidebar-->
    <!-- ======= Contenido principal======= -->
-<main id="main" class="main">
-    
- 
+
+<main id="main" class="main main-principal">
+	<div class="dd">wwww</div>
 </main>
+
+
    <!-- ======= Footer ======= -->
   <!--  
 <footer id="footer" class="footer">
@@ -334,9 +344,12 @@
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
    <!-- Sistema JS Files -->
 
+
+
+
+
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  
-  
   <script src="./script/main.js" type="text/javascript"></script>
 </body>
 </html>

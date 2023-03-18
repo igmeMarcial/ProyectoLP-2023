@@ -1,0 +1,14 @@
+127.0.0.1 - - [17/Mar/2023:23:26:32 -0500] "GET / HTTP/1.1" 404 1002
+0:0:0:0:0:0:0:1 - - [17/Mar/2023:23:26:33 -0500] "GET /proyectoLP_2023/Main.jsp HTTP/1.1" 200 12704
+0:0:0:0:0:0:0:1 - - [17/Mar/2023:23:26:33 -0500] "GET /proyectoLP_2023/css/main.css HTTP/1.1" 200 18772
+0:0:0:0:0:0:0:1 - - [17/Mar/2023:23:26:33 -0500] "GET /proyectoLP_2023/script/main.js HTTP/1.1" 200 622
+0:0:0:0:0:0:0:1 - - [17/Mar/2023:23:26:33 -0500] "GET /proyectoLP_2023/img/user.png HTTP/1.1" 200 7705
+0:0:0:0:0:0:0:1 - - [17/Mar/2023:23:26:43 -0500] "GET /proyectoLP_2023/Main.jsp HTTP/1.1" 200 12704
+0:0:0:0:0:0:0:1 - - [17/Mar/2023:23:26:43 -0500] "GET /proyectoLP_2023/css/main.css HTTP/1.1" 200 18772
+0:0:0:0:0:0:0:1 - - [17/Mar/2023:23:26:43 -0500] "GET /proyectoLP_2023/script/main.js HTTP/1.1" 200 622
+0:0:0:0:0:0:0:1 - - [17/Mar/2023:23:26:43 -0500] "GET /proyectoLP_2023/img/user.png HTTP/1.1" 200 7705
+0:0:0:0:0:0:0:1 - - [17/Mar/2023:23:26:44 -0500] "GET /favicon.ico HTTP/1.1" 404 1024
+0:0:0:0:0:0:0:1 - - [17/Mar/2023:23:29:32 -0500] "GET /proyectoLP_2023/Prueba.jsp HTTP/1.1" 200 4204
+0:0:0:0:0:0:0:1 - - [17/Mar/2023:23:29:44 -0500] "GET /proyectoLP_2023/Prueba.jsp HTTP/1.1" 200 4204
+0:0:0:0:0:0:0:1 - - [17/Mar/2023:23:30:32 -0500] "GET /proyectoLP_2023/Prueba.jsp HTTP/1.1" 200 4178
+0:0:0:0:0:0:0:1 - - [17/Mar/2023:23:30:43 -0500] "GET /proyectoLP_2023/Prueba.jsp HTTP/1.1" 200 4167

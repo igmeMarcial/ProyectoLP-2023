@@ -2125,3 +2125,7 @@
 0:0:0:0:0:0:0:1 - - [15/Mar/2023:23:19:34 -0500] "GET /proyectoLP_2023/Prueba.jsp HTTP/1.1" 200 4175
 0:0:0:0:0:0:0:1 - - [15/Mar/2023:23:19:49 -0500] "GET /proyectoLP_2023/Prueba.jsp HTTP/1.1" 200 4175
 0:0:0:0:0:0:0:1 - - [15/Mar/2023:23:21:07 -0500] "GET /proyectoLP_2023/Prueba.jsp HTTP/1.1" 200 4204
+0:0:0:0:0:0:0:1 - - [15/Mar/2023:23:29:41 -0500] "GET /proyectoLP_2023/Main.jsp HTTP/1.1" 200 12704
+0:0:0:0:0:0:0:1 - - [15/Mar/2023:23:29:41 -0500] "GET /proyectoLP_2023/css/main.css HTTP/1.1" 200 18772
+0:0:0:0:0:0:0:1 - - [15/Mar/2023:23:29:42 -0500] "GET /proyectoLP_2023/img/user.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [15/Mar/2023:23:29:42 -0500] "GET /proyectoLP_2023/script/main.js HTTP/1.1" 304 -
