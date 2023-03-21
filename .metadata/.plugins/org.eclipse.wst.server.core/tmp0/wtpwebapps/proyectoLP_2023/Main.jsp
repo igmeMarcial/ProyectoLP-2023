@@ -12,8 +12,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
 	<header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center text-decoration-none">
+      <a href="Main.jsp" class="logo d-flex align-items-center text-decoration-none">
         <img class="logoImg1 d-none d-lg-block" src="./img/logo-somosngr.svg" alt="">
         <img class="logoImg2 d-block d-lg-none" src="./img/logo-ngr.png" alt="">
         <span class="d-none d-lg-block"></span>
@@ -103,7 +103,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
                 <i class="ri-settings-2-line"></i>
                 <span>My Perfil</span>
               </a>
@@ -113,7 +113,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
                 <i class="ri-settings-2-line"></i>
                 <span>Configuración</span>
               </a>
@@ -123,7 +123,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+              <a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
                 <i class="ri-settings-2-line"></i>
                 <span>Ayuda?</span>
               </a>
@@ -154,138 +154,129 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="Main.jsp">
           <i class="bi bi-grid"></i>
           <span>Inicio</span>
         </a>
       </li><!-- final Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="ri-file-list-line"></i><span>Clientes</span><i class="ri-arrow-down-s-line ms-auto"></i>
+        <a class="nav-link collapsed" data-bs-target="#employes-nav" data-bs-toggle="collapse" href="#">
+         <i class="ri-contacts-fill"></i><span>Empleado</span><i class="ri-arrow-down-s-line ms-auto"></i>
           
           
         </a>
-        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="employes-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.html">
-              <i class="ri-group-fill"></i><span>Listado Clientes</span>
+            <a href="#">
+              <i class="ri-group-fill"></i><span>Agregar Nuevo Empleado</span>
             </a>
           </li>
           <li>
-            <a href="components-accordion.html">
-              <i class="ri-group-fill"></i><span>Agregar Nuevo Cliente</span>
+            <a href="#">
+              <i class="ri-group-fill"></i><span>Listar Empleados</span>
             </a>
-          </li>
-          <li>
-            <a href="components-badges.html">
-             	<i class="ri-group-fill"></i><span>Buscar Cliente</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-breadcrumbs.html">
-              <i class="ri-group-fill"></i><span>ActualizarClientes</span>
-            </a>
-          </li>
+          </li>       
         </ul>
       </li><!-- Final componentes Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="ri-stack-line"></i><span>Categorias</span><i class="ri-arrow-down-s-line ms-auto"></i>
+        <a class="nav-link collapsed" data-bs-target="#category-nav" data-bs-toggle="collapse" href="#">
+          <i class="ri-stack-line"></i><span>Categoria</span><i class="ri-arrow-down-s-line ms-auto"></i>
         </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="category-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
-              <i class="bi bi-circle"></i><span>Agregar Categoria</span>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Agregar nuevo Categoria</span>
             </a>
           </li>
           <li>
-            <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Actualizar Categoria</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-editors.html">
-              <i class="bi bi-circle"></i><span>Listar Categoria</span>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Listar Categorias</span>
             </a>
           </li>
         </ul>
       </li><!-- Final Formulario Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="ri-slideshow-line"></i><span>Marcas</span><i class="ri-arrow-down-s-line ms-auto"></i>
+        <a class="nav-link collapsed" data-bs-target="#provaider-nav" data-bs-toggle="collapse" href="#">
+          <i class="ri-slideshow-line"></i><span>Proveedor</span><i class="ri-arrow-down-s-line ms-auto"></i>
         </a>
-        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="provaider-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="#">
-              <i class="bi bi-circle"></i><span>Agregar Marca</span>
+              <i class="bi bi-circle"></i><span>Agregar nuevo Proveedor</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="bi bi-circle"></i><span>Actualizar Marca</span>
+              <i class="bi bi-circle"></i><span>Listar Proveedores</span>
             </a>
           </li>
-           <li>
-            <a href="#">
-              <i class="bi bi-circle"></i><span>Listar Marca</span>
-            </a>
-          </li>
+          
         </ul>
       </li><!-- End Tables Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-          <i class="ri-todo-line"></i><span>Proveedores</span><i class="ri-arrow-down-s-line ms-auto"></i>
+        <a class="nav-link collapsed" data-bs-target="#inventory-nav" data-bs-toggle="collapse" href="#">
+          <i class="ri-todo-line"></i><span>Inventario</span><i class="ri-arrow-down-s-line ms-auto"></i>
         </a>
-        <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="inventory-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="#">
-              <i class="bi bi-circle"></i><span>Agregar Proveedor</span>
+              <i class="bi bi-circle"></i><span>Agregar Inventario Nuevo</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <i class="bi bi-circle"></i><span>Actuzalir Porveedor</span>
+              <i class="bi bi-circle"></i><span>Listar Inventarios</span>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <i class="bi bi-circle"></i><span>Listar Proveedor</span>
-            </a>
-          </li>
+          
         </ul>
       </li><!-- End Charts Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-          <i class="ri-book-open-line"></i><span>Prodcutos</span><i class="ri-arrow-down-s-line ms-auto"></i>
+        <a class="nav-link collapsed" data-bs-target="#team-nav" data-bs-toggle="collapse" href="#">
+          <i class="ri-book-open-line"></i><span>Equipo</span><i class="ri-arrow-down-s-line ms-auto"></i>
         </a>
-        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="team-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="icons-bootstrap.html">
-              <i class="bi bi-circle"></i><span>Agreagr Producto</span>
+              <i class="bi bi-circle"></i><span>Agregar nuevo Equipo</span>
             </a>
           </li>
           <li>
             <a href="icons-remix.html">
-              <i class="bi bi-circle"></i><span>Actualizar Producto</span>
+              <i class="bi bi-circle"></i><span>Listar Equipos</span>
+            </a>
+          </li>
+          
+        </ul>
+      </li><!-- Final iconos Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#details-nav" data-bs-toggle="collapse" href="#">
+          <i class="ri-numbers-line"></i></i><span>Detalles</span><i class="ri-arrow-down-s-line ms-auto"></i>
+        </a>
+        <ul id="details-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="icons-bootstrap.html">
+              <i class="bi bi-circle"></i><span>Entradas</span>
             </a>
           </li>
           <li>
-            <a href="icons-boxicons.html">
-              <i class="bi bi-circle"></i><span>Buscar Prodcuto</span>
+            <a href="icons-remix.html">
+              <i class="bi bi-circle"></i><span>Salidas</span>
             </a>
           </li>
+          
         </ul>
       </li><!-- Final iconos Nav -->
 
       <li class="nav-heading">Configuraciones</li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="perfil.jsp">
           <i class="ri-file-chart-line"></i>
           <span>Perfil</span>
         </a>
@@ -356,7 +347,7 @@
                     <video autoplay="" loop="" muted="" class="custom-video" poster="">
                         <source src="./img/videongr.mp4" type="video/mp4">
 
-                        Your browser does not support the video tag.
+                        Su navegador no soporta la etiqueta de vídeo.
                     </video>
                 </div>
             </section>
