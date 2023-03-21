@@ -40,7 +40,7 @@ h6 {
 
 .main {	
   margin-top: 60px;
-  padding: 20px 30px;
+ padding: 20px 30px;
   transition: all 0.3s;
 }
 
@@ -1039,21 +1039,44 @@ h6 {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-.footer {
-  padding: 20px 0;
+#footer {
+  padding: 50px 0 20px 0;
   font-size: 14px;
   transition: all 0.3s;
   border-top: 1px solid #cddfff;
+  background-color: rgb(240, 141, 36);
+}
+.socialContent{
+	padding-top:30px;
+}
+.socialContent h3{
+	font-size: 1.125rem;
+    color: #fff;
+}
+.footer-subTitle{
+	color: #fff;  
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+   font-weight: 800;
+    word-break: normal;
+    display: inline-block;
+}
+.footer .links{
+	    color: #fff;
+    text-decoration: underline;  
 }
 
-.footer .copyright {
-  text-align: center;
-  color: #012970;
+.footer .social i{
+	font-size: 32px;
+	color: #fff;  
+	cursor:pointer;
+}
+.footer li{
+	padding: 5px 0;
 }
 
-.footer .credits {
-  padding-top: 5px;
-  text-align: center;
-  font-size: 13px;
-  color: #012970;
-}
+
+
+
+
+
