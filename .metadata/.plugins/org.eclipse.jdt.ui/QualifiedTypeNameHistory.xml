@@ -3,5 +3,21 @@
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="Modelo.Usuario"/>
+<fullyQualifiedTypeName name="Dao.crudUsuario"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="jdk.nashorn.internal.runtime.arrays.IntElements"/>
+<fullyQualifiedTypeName name="Interfaces.IntEmpleado"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="ConectarBD.ConectarBD"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="jdk.nashorn.internal.ir.RuntimeNode.Request"/>
+<fullyQualifiedTypeName name="Modelo.Empleado"/>
+<fullyQualifiedTypeName name="Dao.CrudEmpleado"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="Modelo.Cargo"/>
+<fullyQualifiedTypeName name="Dao.CrudCargo"/>
 </qualifiedTypeNameHistroy>

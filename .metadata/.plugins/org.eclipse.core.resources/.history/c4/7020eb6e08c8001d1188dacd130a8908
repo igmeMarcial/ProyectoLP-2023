@@ -1,0 +1,40 @@
+package Dao;
+
+import java.util.List;
+
+import Interfaces.IntEmpleado;
+import Modelo.Empleado;
+
+public class CrudEmpleado implements IntEmpleado{
+
+	@Override
+	public void RegistrarEmpleado(Empleado em) {
+		
+		
+	}
+
+	@Override
+	public void ActualizarEmpleado(Empleado em) {
+		
+		
+	}
+
+	@Override
+	public void EliminarEmpleado(Empleado em) {
+		
+		
+	}
+
+	@Override
+	public List<Empleado> ListarEmpleados() {
+		
+		return null;
+	}
+
+	@Override
+	public Empleado BuscarEmpleado(Empleado em) {
+	
+		return null;
+	}
+
+}

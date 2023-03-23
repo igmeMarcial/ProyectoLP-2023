@@ -44,22 +44,22 @@
 
         <div class="d-flex align-items-center justify-content-center h-custom-2 px-5  mt-5 pt-5 pt-xl-0  ">
 
-          <form style="width: 20rem;">
+          <form action="ControladorUsuario" method="post" style="width: 20rem;">
 
             <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;"></h3>
 
             <div class="form-outline mb-4">
-              <input type="email" id="input-custom" class="form-control form-control-lg " />
+              <input type="text" id="input-custom" name="usuario" class="form-control form-control-lg " />
               <label class="form-label" for="form2Example18">Número de Documento</label>
             </div>
 
             <div class="form-outline mb-5">
-              <input type="password" id="input-custom" class="form-control form-control-lg nput-custom"" />
+              <input type="password" id="input-custom" name="password" class="form-control form-control-lg nput-custom"" />
               <label class="form-label" for="form2Example28">Contraseña</label>
             </div>
 
             <div class="pt-1 mb-4">
-              <button class="btn  btn-lg btn-block btn-login" type="submit">Ingresar</button>
+              <button name="accion" value="Ingresar" class="btn  btn-lg btn-block btn-login" type="submit">Ingresar</button>
             </div>
 
             <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Olvidé mi contraseña?</a></p>

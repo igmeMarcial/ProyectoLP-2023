@@ -1,0 +1,68 @@
+package Dao;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import ConectarBD.ConectarBD;
+import Interfaces.IntEmpleado;
+import Modelo.Empleado;
+
+public class CrudEmpleado implements IntEmpleado{
+
+	@Override
+	public void RegistrarEmpleado(Empleado em) {
+		
+	}
+
+	@Override
+	public void ActualizarEmpleado(Empleado em) {
+		
+		
+	}
+
+	@Override
+	public void EliminarEmpleado(Empleado em) {
+		
+		
+	}
+
+	@Override
+	public List<Empleado> ListarEmpleados() {
+		
+		String sql="select e.idEmpleado, e.nombre, e.apellidos,e.sexo,e.fechaNacimiento,e.telefono,e.celular,e.email,c.NombreCargo from empleado e inner join cargo c on c.idCargo = e.idCargo order by e.idEmpleado";
+		PreparedStatement ps=null;
+		ResultSet rs=null;
+		List<Empleado> listar=new ArrayList<Empleado>();
+		try {
+			ps=ConectarBD.conexion().prepareStatement(sql);  
+			rs=ps.executeQuery();		
+			while(rs.next()){				
+				Empleado emp=new Empleado();
+				emp.setIdEmpleado(rs.getInt(1));
+				emp.setNombre(rs.getString(2));
+				emp.setApellidos(rs.getString(3));
+				emp.setSexo(rs.getString(4));
+				emp.setFechaNacimiento(rs.getDate(5));
+				emp.setTelefono(rs.getString(6));
+				emp.setCelular(rs.getString(7));
+				emp.setEmail(rs.getString(8));	
+				emp.setCargo(rs.getString(9));		
+				
+				listar.add(emp);	
+			} 
+		} catch (SQLException e) {		
+			e.printStackTrace();			
+		} 		
+		return listar;	
+	}
+
+	@Override
+	public Empleado BuscarEmpleado(Empleado em) {
+	
+		return null;
+	}
+
+}

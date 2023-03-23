@@ -1,0 +1,41 @@
+package Dao;
+
+import java.util.List;
+
+import Interfaces.IntEmpleado;
+import Modelo.Empleado;
+
+public class CrudEmpleado implements IntEmpleado{
+
+	@Override
+	public void RegistrarEmpleado(Empleado em) {
+		String sql="select e.nombre, e.apellidos,e.sexo,e.fechaNacimiento,e.telefono,e.celular,e.email,c.NombreCargo from empleado e inner join cargo c on c.idCargo = e.idCargo order by e.idEmpleado";
+		
+		
+	}
+
+	@Override
+	public void ActualizarEmpleado(Empleado em) {
+		
+		
+	}
+
+	@Override
+	public void EliminarEmpleado(Empleado em) {
+		
+		
+	}
+
+	@Override
+	public List<Empleado> ListarEmpleados() {
+		
+		return null;
+	}
+
+	@Override
+	public Empleado BuscarEmpleado(Empleado em) {
+	
+		return null;
+	}
+
+}
