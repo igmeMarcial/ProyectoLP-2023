@@ -11,14 +11,15 @@ public class Empleado {
 	private String telefono;
 	private String celular;
 	private String email;
-	private String cargo;
+	private int cargo;
+	private String cargoNombre;
 	public Empleado(){
 		
 	}
-	public Empleado(int idEmpleado,String nombre, String apellidos, String sexo, Date fechaNacimiento, String telefono, String celular,
-			String email, String cargo) {
+	public Empleado(int idEmpleado, String nombre, String apellidos, String sexo, Date fechaNacimiento, String telefono,
+			String celular, String email, int cargo, String cargoNombre) {
 		super();
-		this.idEmpleado=idEmpleado;
+		this.idEmpleado = idEmpleado;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.sexo = sexo;
@@ -27,6 +28,7 @@ public class Empleado {
 		this.celular = celular;
 		this.email = email;
 		this.cargo = cargo;
+		this.cargoNombre = cargoNombre;
 	}
 	public int getIdEmpleado() {
 		return idEmpleado;
@@ -76,11 +78,18 @@ public class Empleado {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getCargo() {
+	public int getCargo() {
 		return cargo;
 	}
-	public void setCargo(String cargo) {
+	public void setCargo(int cargo) {
 		this.cargo = cargo;
 	}
+	public String getCargoNombre() {
+		return cargoNombre;
+	}
+	public void setCargoNombre(String cargoNombre) {
+		this.cargoNombre = cargoNombre;
+	}
+	
 	
 }

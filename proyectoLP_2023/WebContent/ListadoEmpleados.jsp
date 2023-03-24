@@ -328,7 +328,7 @@
 												</td>
 												<td class="align-middle text-center">
 													<div class="text-start">
-														<p class="text-xs text-secondary font-weight-bold mb-0"><c:out value="${empleado.cargo}"></c:out></p>
+														<p class="text-xs text-secondary font-weight-bold mb-0"><c:out value="${empleado.cargoNombre}"></c:out></p>
 													</div>
 												</td>
 												<td class="align-middle text-center text-sm">
@@ -349,8 +349,11 @@
 															<i class="ri-more-2-fill"></i>
 														</button>
 														<div class="dropdown-menu menu-dropdown-b" style="">
-															<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-															<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
+															<a class="dropdown-item" href="<c:url value="ControladorCrud">
+                                                       <c:param name="accion" value="leerEmpleado" />
+                                                       <c:param name="cod" value="${empleado.idEmpleado}" />
+                                                   </c:url>"><i class="ri-edit-line"></i> Editar</a>
+															<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Eliminar</a>
 														</div>
 													</div>
 												</td>
@@ -360,8 +363,8 @@
 												<td>
 													<div class="d-flex px-3 py-1">
 														<div class="d-flex flex-column justify-content-center">
-															<h6 class="mb-0 text-sm">Richard Gran</h6>
-															<p class="text-xs text-secondary mb-0">richard@creative-tim.com</p>
+															<h6 class="mb-0 text-sm">nameDefecto</h6>
+															<p class="text-xs text-secondary mb-0">richard@sssss-tim.com</p>
 														</div>
 													</div>
 												</td>

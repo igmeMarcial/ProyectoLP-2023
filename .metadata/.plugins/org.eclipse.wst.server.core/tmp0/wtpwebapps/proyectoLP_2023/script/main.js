@@ -26,3 +26,6 @@ function eventos(e){
 	}
 }
 
+const onscroll = function(el, listener) {
+	  el.addEventListener('scroll', listener);
+	}

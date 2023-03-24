@@ -161,6 +161,21 @@ textarea{
 	border-color: #f08d33 !important;
 }
 
+#menuSelect fieldset {
+      border: 0;
+    }
+#menuSelect label {
+      display: block;
+      margin: 30px 0 0 0;
+ }
+#menuSelect .overflow {
+    height: 200px;
+}
+.inputSelectMenu{
+	transition: opacity .15s ease-in;
+}
+
+
 
 
 

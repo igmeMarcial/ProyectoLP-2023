@@ -24,6 +24,21 @@
 		<link rel="stylesheet" type="text/css" href="./css/main.css" />
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+		  <link rel="stylesheet" href="/resources/demos/style.css">
+		  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+		 
+		
+			
+		  <script>
+		  $( function() {
+		    $( "#fechaNacimiento" ).datepicker();
+		    $( "#menuSelect" ).selectmenu();
+		  
+		  } );
+		  </script>
 		<title>Principal</title>
 	</head>
 	<body>
@@ -302,29 +317,29 @@
 								<small class="text-muted float-end">Default</small>
 							</div>
 							<div class="card-body">
-								<form>
+								<form action="ControladorCrud?accion=nuevoEmpleado" method="post">
 									<div class="mb-3">
-										<label class="form-label" for="basic-icon-default-fullname">Nombre</label>
+										<label class="form-label" for="nombreNuevo">Nombre</label>
 										<div class="input-group input-group-merge">
 											<span id="basic-icon-default-fullname2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input type="text" class="form-control inputCustom borderColorInput" id="basic-icon-default-fullname" placeholder="Marcial" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2" />
+											<input name="nombreNuevo" type="text" class="form-control inputCustom borderColorInput" id="nombreNuevo" placeholder="Marcial" aria-label="Marcial" aria-describedby="basic-icon-default-fullname" />
 										</div>
 									</div>
 									<div class="mb-3">
-										<label class="form-label" for="basic-icon-default-fullname">Apellidos</label>
+										<label class="form-label" for="apellidosNuevo">Apellidos</label>
 										<div class="input-group input-group-merge">
 											<span id="basic-icon-default-fullname2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input type="text" class="form-control inputCustom borderColorInput" id="basic-icon-default-fullname" placeholder="Apellidos" aria-label="apellido" aria-describedby="basic-icon-default-fullname2" />
+											<input name="apellidosNuevo" type="text" class="form-control inputCustom borderColorInput" id="apellidosNuevo" placeholder="Apellidos" aria-label="apellido" aria-describedby="basic-icon-default-fullname2" />
 										</div>
 									</div>
 									<div class="mb-3">
-										<label class="form-label" for="basic-icon-default-company">Fecha Nacimiento</label>
+										<label class="form-label" for="fechaNacimiento">Fecha Nacimiento</label>
 										<div class="input-group input-group-merge">
 											<span id="basic-icon-default-company2" class="input-group-text labelCustom borderColorInput" ><i class="ri-folder-add-line"></i></span>
-											<input type="text" id="basic-icon-default-company" class="form-control inputCustom borderColorInput" placeholder="Fecha" aria-label="ACME Inc." aria-describedby="basic-icon-default-company2" />
+											<input name="fechaNacimiento" type="text" id="fechaNacimiento" class="form-control inputCustom borderColorInput" placeholder="Fecha" aria-label="0000-00-00" aria-describedby="basic-icon-default-fechaNac" />
 										</div>
 									</div>
-									<div class="mb-3">
+									<div class="mb-3" id="">
 										<label class="form-label" for="basic-icon-default-company">Sexo</label>
 										<div class="input-group input-group-merge">
 											<span id="basic-icon-default-company2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
@@ -332,45 +347,74 @@
 										</div>
 									</div>
 									<div class="mb-3">
-										<label class="form-label" for="basic-icon-default-email">Email</label>
+										<label class="form-label" for="emailNuevo">Email</label>
 										<div class="input-group input-group-merge">
 											<span class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input type="text" id="default-email" class="form-control inputCustom borderColorInput" placeholder="ejemplo.@gmail.com" aria-label="john.doe" aria-describedby="basic-icon-default-email2" />
+											<input name="emailNuevo" type="text" id="emailNuevo" class="form-control inputCustom borderColorInput" placeholder="ejemplo.@gmail.com" aria-label="example.gmail.com" aria-describedby="basic-icon-default-email2" />
 											<span id="basic-icon-default-email2" class="input-group-text labelCustomEmail borderColorInput">@example.com</span>
 										</div>
 										<div class="form-text">Puedes usar letras, números puntos</div>
 									</div>
 									<div class="mb-3">
-										<label class="form-label" for="basic-icon-default-phone labelCustom" >Celular</label>
+										<label class="form-label labelCustom" for="celularNuevo" >Celular</label>
 										<div class="input-group input-group-merge">
-											<span id="basic-icon-default-phone2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input type="text" id="basic-icon-default-phone" class="form-control phone-mask inputCustom borderColorInput" placeholder="658 799 8941" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2" />
+											<span id="celularNuevo" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
+											<input name="celularNuevo" type="text" id="basic-icon-default-phone" class="form-control phone-mask inputCustom borderColorInput" placeholder="658 799 8941" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone" />
 										</div>
 									</div>
 									<div class="mb-3">
-										<label class="form-label" for="basic-icon-default-phone labelCustom">Teléfono</label>
+										<label class="form-label labelCustom" for="telefonoNuevo">Teléfono</label>
 										<div class="input-group input-group-merge">
 											<span id="basic-icon-default-phone2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input type="text" id="basic-icon-default-phone" class="form-control phone-mask inputCustom borderColorInput" placeholder="964 359 072" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2" />
+											<input name="telefonoNuevo" type="text" id="telefonoNuevo" class="form-control phone-mask inputCustom borderColorInput" placeholder="964 359 072" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2" />
 										</div>
 									</div>
 									<div class="mb-3">
-										<label class="form-label" for="basic-icon-default-phone labelCustom">Cargo</label>
+										<label class="form-label labelCustom"" for="cargoNuevo" >Cargo</label>
 										<div class="input-group input-group-merge">
 											<span id="basic-icon-default-phone2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input type="text" id="basic-icon-default-phone" class="form-control phone-mask inputCustom borderColorInput" placeholder="select" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2" />
+											<input name="cargoNuevo"" type="text" id="cargoNuevo"" class="form-control phone-mask inputCustom borderColorInput" placeholder="select" aria-label="Admin" aria-describedby="basic-icon-default-cargo" />
 										</div>
 									</div>
 									<div class="mb-3">
-										<label class="form-label" for="basic-icon-default-message ">Message</label>
+										<label class="form-label" for="sexoNuevo">Sexo</label>
+										<div class="input-group input-group-merge">
+											<span id="basic-icon-default-company2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
+											<select id="sexoNuevo" name="sexoNuevo" class="form-select inputCustom borderColorInput" aria-label="Default select example">
+											  <option selected>Selecciona</option>
+											  <option value="M">M</option>
+											  <option value="F">F</option>
+											  
+											</select>
+										</div>									    
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="testNuevo">cargos</label>
+										<div class="input-group input-group-merge">
+											<span id="basic-icon-default-company2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
+											<select id="testNuevo" name="testNuevo" class="form-select inputCustom borderColorInput" aria-label="Default select example">
+												<option selected>Selecciona</option>
+												<c:forEach items="${listadoCargos}" var="cargo">
+											  		
+												  <option value="${cargo.idCargo}"> ${cargo.nombreCargo}</option>
+												</c:forEach>
+											  
+											</select>
+										</div>									    
+									</div>
+									
+									
+									<div class="mb-3">
+										<label class="form-label" for="textoNuevo">Message</label>
 										<div class="input-group input-group-merge">
 											<span id="basic-icon-default-message2" class="input-group-text labelCustom borderColorInput" ><i class="ri-folder-add-line"></i></span>
 											<textarea
-												id="basic-icon-default-message"
+												name="textoNuevo"
+												id="textoNuevo"
 												class="form-control inputCustom borderColorInput"
 												placeholder="Escribe el texto que desas decir xD"
-												aria-label="Hi, Do you have a moment to talk Joe?"
-												aria-describedby="basic-icon-default-message2"
+												aria-label="Hi, Do you have a moment to talk igme?"
+												aria-describedby="basic-icon-default-message"
 											></textarea>
 										</div>
 									</div>
