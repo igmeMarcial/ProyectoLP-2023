@@ -50,7 +50,7 @@ public class CrudEmpleado implements IntEmpleado{
 	@Override
 	public void ActualizarEmpleado(Empleado em) {
 				String sql="update empleado set nombre=?,apellidos=?,"
-						+ "sexo=?,fechaNacimiento=?,telefono=?,celular=?,email=?,idCargo=? where idproducto=?";
+						+ "sexo=?,fechaNacimiento=?,telefono=?,celular=?,email=?,idCargo=? where idEmpleado=?";
 				
 				
 				PreparedStatement ps=null;
@@ -67,25 +67,20 @@ public class CrudEmpleado implements IntEmpleado{
 					ps.setString(6,em.getCelular());
 					ps.setString(7,em.getEmail());
 					ps.setInt(8,em.getCargo());
+					ps.setInt(9,em.getIdEmpleado());
 					
 					int y=ps.executeUpdate();
 					
-					if(y>0){
-						
-						
-						System.out.println("Empleado actualizado correctamente");
-						
-					}else{
-						
+					if(y>0){									
+						System.out.println("Empleado actualizado correctamente");						
+					}else{						
 						System.out.println("No se puede actualizar Empleado");					
 					}
-																			
-														
+																																	
 				} catch (SQLException e) {
-					System.out.println("No se puede actualizar Empleado" + e.getMessage());	
+					System.out.println("No se puede actualizar Empleado " + e.getMessage());	
 					e.printStackTrace();
-				}
-		
+				}		
 	}
 
 	@Override

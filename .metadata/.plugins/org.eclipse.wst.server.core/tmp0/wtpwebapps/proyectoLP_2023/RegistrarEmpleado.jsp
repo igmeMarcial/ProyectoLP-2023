@@ -373,7 +373,7 @@
 										<label class="form-label labelCustom"" for="cargoNuevo" >Cargo</label>
 										<div class="input-group input-group-merge">
 											<span id="basic-icon-default-phone2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input name="cargoNuevo"" type="text" id="cargoNuevo"" class="form-control phone-mask inputCustom borderColorInput" placeholder="select" aria-label="Admin" aria-describedby="basic-icon-default-cargo" />
+											<input name="cargoPrueba"" type="text" id="cargoNuevo"" class="form-control phone-mask inputCustom borderColorInput" placeholder="select" aria-label="Admin" aria-describedby="basic-icon-default-cargo" />
 										</div>
 									</div>
 									<div class="mb-3">
@@ -389,13 +389,12 @@
 										</div>									    
 									</div>
 									<div class="mb-3">
-										<label class="form-label" for="testNuevo">cargos</label>
+										<label class="form-label" for="cargoNuevo">Cargo</label>
 										<div class="input-group input-group-merge">
 											<span id="basic-icon-default-company2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<select id="testNuevo" name="testNuevo" class="form-select inputCustom borderColorInput" aria-label="Default select example">
+											<select id="cargoNuevo" name="cargoNuevo" class="form-select inputCustom borderColorInput" aria-label="Default select example">
 												<option selected>Selecciona</option>
-												<c:forEach items="${listadoCargos}" var="cargo">
-											  		
+												<c:forEach items="${listadoCargos}" var="cargo">											  		
 												  <option value="${cargo.idCargo}"> ${cargo.nombreCargo}</option>
 												</c:forEach>
 											  

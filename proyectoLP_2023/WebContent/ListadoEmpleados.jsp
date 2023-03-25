@@ -401,8 +401,8 @@
 												<td>
 													<div class="d-flex px-3 py-1">
 														<div class="d-flex flex-column justify-content-center">
-															<h6 class="mb-0 text-sm">Miriam Eric</h6>
-															<p class="text-xs text-secondary mb-0">miriam@creative-tim.com</p>
+															<h6 class="mb-0 text-sm">Persona Pruba</h6>
+															<p class="text-xs text-secondary mb-0">prueba@gmail.com</p>
 														</div>
 													</div>
 												</td>
