@@ -22,4 +22,5 @@
 <fullyQualifiedTypeName name="Modelo.Empleado"/>
 <fullyQualifiedTypeName name="Dao.CrudEmpleado"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.text.DateFormat"/>
 </qualifiedTypeNameHistroy>

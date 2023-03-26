@@ -24,7 +24,7 @@
 		<link rel="stylesheet" type="text/css" href="./css/main.css" />
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
-		<title>Principal</title>
+		<title>Listado</title>
 	</head>
 	<body>
 		<!-- ======= Header(Cabezera) ======= -->
@@ -176,10 +176,10 @@
 					<a class="nav-link collapsed" data-bs-target="#category-nav" data-bs-toggle="collapse" href="#"> <i class="ri-stack-line"></i><span>Categoria</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="category-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Agregar nuevo Categoria</span> </a>
+							<a href="ControladorCrud?accion=registrarCategoria"> <i class="bi bi-circle"></i><span>Agregar nuevo Categoria</span> </a>
 						</li>
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Listar Categorias</span> </a>
+							<a href="ControladorCrud?accion=listarCategorias"> <i class="bi bi-circle"></i><span>Listar Categorias</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -189,10 +189,10 @@
 					<a class="nav-link collapsed" data-bs-target="#provaider-nav" data-bs-toggle="collapse" href="#"> <i class="ri-slideshow-line"></i><span>Proveedor</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="provaider-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Agregar nuevo Proveedor</span> </a>
+							<a href="ControladorCrud?accion=registrarProveedor"> <i class="bi bi-circle"></i><span>Agregar nuevo Proveedor</span> </a>
 						</li>
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Listar Proveedores</span> </a>
+							<a href="ControladorCrud?accion=listarProveedores"> <i class="bi bi-circle"></i><span>Listar Proveedores</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -202,10 +202,10 @@
 					<a class="nav-link collapsed" data-bs-target="#inventory-nav" data-bs-toggle="collapse" href="#"> <i class="ri-todo-line"></i><span>Inventario</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="inventory-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Agregar Inventario Nuevo</span> </a>
+							<a href="ControladorCrud?accion=registrarInventario"> <i class="bi bi-circle"></i><span>Agregar Inventario Nuevo</span> </a>
 						</li>
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Listar Inventarios</span> </a>
+							<a href="ControladorCrud?accion=listarInventario"> <i class="bi bi-circle"></i><span>Listar Inventarios</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -215,10 +215,10 @@
 					<a class="nav-link collapsed" data-bs-target="#team-nav" data-bs-toggle="collapse" href="#"> <i class="ri-book-open-line"></i><span>Equipo</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="team-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="icons-bootstrap.html"> <i class="bi bi-circle"></i><span>Agregar nuevo Equipo</span> </a>
+							<a href="ControladorCrud?accion=registrarEquipo"> <i class="bi bi-circle"></i><span>Agregar nuevo Equipo</span> </a>
 						</li>
 						<li>
-							<a href="icons-remix.html"> <i class="bi bi-circle"></i><span>Listar Equipos</span> </a>
+							<a href="ControladorCrud?accion=listarEquipos"> <i class="bi bi-circle"></i><span>Listar Equipos</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -227,10 +227,10 @@
 					<a class="nav-link collapsed" data-bs-target="#details-nav" data-bs-toggle="collapse" href="#"> <i class="ri-numbers-line"></i><span>Detalles</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="details-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="icons-bootstrap.html"> <i class="bi bi-circle"></i><span>Entradas</span> </a>
+							<a href="ControladorCrud?accion=entradas"> <i class="bi bi-circle"></i><span>Entradas</span> </a>
 						</li>
 						<li>
-							<a href="icons-remix.html"> <i class="bi bi-circle"></i><span>Salidas</span> </a>
+							<a href="ControladorCrud?accion=salidas"> <i class="bi bi-circle"></i><span>Salidas</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -239,7 +239,7 @@
 				<li class="nav-heading">Configuraciones</li>
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="perfil.jsp">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=perfil">
 						<i class="ri-file-chart-line"></i>
 						<span>Perfil</span>
 					</a>
@@ -247,7 +247,7 @@
 				<!-- Final Profile Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=empresa">
 						<i class="ri-file-chart-line"></i>
 						<span>Empresa</span>
 					</a>
@@ -255,7 +255,7 @@
 				<!-- End F.A.Q Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=contacto">
 						<i class="ri-file-chart-line"></i>
 						<span>Contacto</span>
 					</a>
@@ -263,7 +263,7 @@
 				<!-- Final Contact Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=registro">
 						<i class="ri-file-chart-line"></i>
 						<span>Registro</span>
 					</a>
@@ -271,7 +271,7 @@
 				<!-- Final Registro Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=login">
 						<i class="ri-file-chart-line"></i>
 						<span>Login</span>
 					</a>
@@ -279,7 +279,7 @@
 				<!-- Final Login Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=error">
 						<i class="ri-file-chart-line"></i>
 						<span>Error 404</span>
 					</a>

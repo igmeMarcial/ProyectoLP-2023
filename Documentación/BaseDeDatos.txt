@@ -1,0 +1,48 @@
+CREATE DATABASE  proyectoLP;
+
+CREATE TABLE `usuario` (
+  `idUsuario` int auto_increment primary key,
+  `userName` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `empleado`;
+ SET character_set_client = utf8mb4 ;
+ CREATE TABLE `empleado` (
+  `idEmpleado` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(200) NOT NULL,
+    `apellidos` varchar(200) NOT NULL,
+    `sexo` char(1) DEFAULT NULL,
+    `fechaNacimiento` date DEFAULT NULL,
+  `telefono` int(11)  NULL,
+  `celular` int(11)  NULL,
+  `email` varchar(50)  NULL,
+  `idCargo`  int (11) not null,
+  PRIMARY KEY (`idEmpleado`),
+  CONSTRAINT `fk_empleado_cargo` FOREIGN KEY (`idCargo`) REFERENCES `cargo` (`idCargo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `empleado` ( `nombre`,`apellidos`, `sexo`, `fechaNacimiento`, `telefono`,`email`,`idCargo`) VALUES
+('Marcial', 'Igme Chillca', 'M', '2001-05-28', '055544','igmemarcial@gmail.com',1),
+('Sheyla', 'Galarza', 'F', '2000-05-28', '055545','sheyla.galarza@ngr.com.pe',2),
+('Alonzo', 'Barreda', 'M', '2000-05-28', '055545','chanchito15@ngr.com.pe',2),
+('Joss', 'Paucarpura', 'F', '2000-05-28', '055545','joss@ngr.com.pe',2);
+
+select e.idEmpleado,e.nombre, e.apellidos,e.sexo,e.fechaNacimiento,e.telefono,e.celular,e.email,c.NombreCargo from empleado e inner join cargo c on c.idCargo = e.idCargo order by e.idEmpleado;
+
+
+CREATE TABLE `cargo` (
+  `idCargo` int (11) not null,
+  `NombreCargo` varchar(20) DEFAULT NULL,
+  `estado` bit(1) DEFAULT NULL,
+    PRIMARY KEY (`idCargo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `cargo` (`idCargo`, `NombreCargo`, `estado`) VALUES
+(1, 'ADMINISTRADOR', '1'),
+(2, 'VENDEDOR', '1');
+
+
+select c.idCargo, c.NombreCargo, c.estado from cargo c order by c.idCargo;
