@@ -173,10 +173,10 @@
 					<a class="nav-link collapsed" data-bs-target="#category-nav" data-bs-toggle="collapse" href="#"> <i class="ri-stack-line"></i><span>Categoria</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="category-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Agregar nuevo Categoria</span> </a>
+							<a href="ControladorCategoria?accion=registrarCategoria"> <i class="bi bi-circle"></i><span>Agregar nuevo Categoria</span> </a>
 						</li>
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Listar Categorias</span> </a>
+							<a href="ControladorCategoria?accion=registrarCategoria"> <i class="bi bi-circle"></i><span>Listar Categorias</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -199,10 +199,10 @@
 					<a class="nav-link collapsed" data-bs-target="#inventory-nav" data-bs-toggle="collapse" href="#"> <i class="ri-todo-line"></i><span>Inventario</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="inventory-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Agregar Inventario Nuevo</span> </a>
+							<a href="ControladorInventario?accion=registrarIventario"> <i class="bi bi-circle"></i><span>Agregar Inventario Nuevo</span> </a>
 						</li>
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Listar Inventarios</span> </a>
+							<a href="ControladorInventario?accion=registrarInventario"> <i class="bi bi-circle"></i><span>Listar Inventarios</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -212,10 +212,10 @@
 					<a class="nav-link collapsed" data-bs-target="#team-nav" data-bs-toggle="collapse" href="#"> <i class="ri-book-open-line"></i><span>Equipo</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="team-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="icons-bootstrap.html"> <i class="bi bi-circle"></i><span>Agregar nuevo Equipo</span> </a>
+							<a href="ControladorEquipo?accion=registrarEquipo"> <i class="bi bi-circle"></i><span>Agregar nuevo Equipo</span> </a>
 						</li>
 						<li>
-							<a href="icons-remix.html"> <i class="bi bi-circle"></i><span>Listar Equipos</span> </a>
+							<a href="ControladorEquipo?accion=registrarEquipo"> <i class="bi bi-circle"></i><span>Listar Equipos</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -224,10 +224,10 @@
 					<a class="nav-link collapsed" data-bs-target="#details-nav" data-bs-toggle="collapse" href="#"> <i class="ri-numbers-line"></i><span>Detalles</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="details-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="icons-bootstrap.html"> <i class="bi bi-circle"></i><span>Entradas</span> </a>
+							<a href="ControladorDatalles?accion=entradas"> <i class="bi bi-circle"></i><span>Entradas</span> </a>
 						</li>
 						<li>
-							<a href="icons-remix.html"> <i class="bi bi-circle"></i><span>Salidas</span> </a>
+							<a href="ControladorDetalles?accion=salidas"> <i class="bi bi-circle"></i><span>Salidas</span> </a>
 						</li>
 					</ul>
 				</li>

@@ -58,6 +58,9 @@ public class ControladorCrud extends HttpServlet {
 				case "actualizarEmpleado":
 					actualizarUsuario(request,response);
 					break;
+				case "eliminarEmpleado":
+					eliminarUsuario(request,response);
+					break;
 				default:
 					response.sendRedirect("Main.jsp");
 				}
@@ -73,6 +76,29 @@ public class ControladorCrud extends HttpServlet {
 	            }
 		}
 	}
+	private void eliminarUsuario(HttpServletRequest request, HttpServletResponse response) {
+		Empleado em = new Empleado();
+		CrudEmpleado crud =new CrudEmpleado();
+		String id = request.getParameter("idDelete");
+		
+			
+		if(id != null){
+			
+			em.setIdEmpleado(Integer.parseInt(id));
+			try {
+				crud.EliminarEmpleado(em);
+				response.sendRedirect("ControladorCrud?accion=listarEmpleados");										
+				request.setAttribute("success","Eliminado correctamente");
+				
+			} catch (Exception e) {
+				request.setAttribute("mensaje","No se pudo eliminar Empleado Alert" + e.getMessage());
+			}
+		}else{
+			 request.setAttribute("mensaje","El id no se puede eliminar");
+		}
+		
+	}
+
 	private void actualizarUsuario(HttpServletRequest request, HttpServletResponse response) {
 		String url="/ActualizarEmpleados.jsp";
 		Empleado em = new Empleado();
@@ -201,15 +227,19 @@ public class ControladorCrud extends HttpServlet {
 		String sexo = request.getParameter("sexoNuevo");
 		String cargo = request.getParameter("cargoNuevo");							
 		
-		
-		System.out.println(celular);
 		System.out.println(nombre);
-		System.out.println(fechaN);
+		System.out.println(celular);
+		System.out.println(apellidos);
+		System.out.println(celular);
 		System.out.println(email);
 		System.out.println( "cargo  => " +cargo);
 		System.out.println(sexo);
 		System.out.println(fechaN);
+		System.out.println(telefono);
 		
+		 
+		 
+		 
 		if(nombre !=null  
 			&& 	apellidos!=null  
 			&& 	fechaN!=null  
@@ -243,8 +273,10 @@ public class ControladorCrud extends HttpServlet {
 				System.out.println("No se realizó el registro: " + e.getMessage());
 				 request.setAttribute("empleado",em);
 				 this.registrarEmpleado(request,response);
-			}						
-		}				
+			}	
+								
+		}	
+			
 	}
 
 	private void registrarEmpleado(HttpServletRequest request, HttpServletResponse response) {

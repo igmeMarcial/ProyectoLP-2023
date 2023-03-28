@@ -78,12 +78,17 @@ public class ControladorProveedor extends HttpServlet {
 	}
 
 	private void registrarNuevoProveedor(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	private void registrarProveedor(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
+		String url="/RegistrarProveedor.jsp";
+		try {
+			this.getServletConfig().getServletContext().getRequestDispatcher(url).forward(request, response);
+		} catch (Exception e) {
+			request.setAttribute("mensaje","No se pudo realizar petición " + e.getMessage());
+			System.out.println("No se realizó peticion: " + e.getMessage());
+		}
 		
 	}
 

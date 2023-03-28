@@ -9,6 +9,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Listado</title>
 		<link rel="stylesheet" type="text/css" href="./css/listadoEmpleados.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,7 +25,9 @@
 		<link rel="stylesheet" type="text/css" href="./css/main.css" />
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
-		<title>Listado</title>
+		
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		
 	</head>
 	<body>
 		<!-- ======= Header(Cabezera) ======= -->
@@ -353,88 +356,18 @@
                                                        <c:param name="accion" value="leerEmpleado" />
                                                        <c:param name="cod" value="${empleado.idEmpleado}" />
                                                    </c:url>"><i class="ri-edit-line"></i> Editar</a>
-															<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Eliminar</a>
+                                                   
+                                                   			<input type="hidden" id="codigo"  value="${empleado.idEmpleado }">
+															<a id="deleteData" class="dropdown-item" href="<c:url value="controladorCrud">
+															<c:param name="accion" value="eliminarEmpleado"/> 
+															<c:param  name="idDelete" value="${empleado.idEmpleado}"/></c:url>">
+															<i class="ri-delete-bin-line"></i> Eliminar</a>
 														</div>
 													</div>
 												</td>
 											</tr>
 											 </c:forEach> 
-											 <tr>
-												<td>
-													<div class="d-flex px-3 py-1">
-														<div class="d-flex flex-column justify-content-center">
-															<h6 class="mb-0 text-sm">nameDefecto</h6>
-															<p class="text-xs text-secondary mb-0">richard@sssss-tim.com</p>
-														</div>
-													</div>
-												</td>
-												<td class="align-middle text-center">
-													<div class="text-start">
-														<p class="text-xs text-secondary font-weight-bold mb-0">Manager</p>
-													</div>
-												</td>
-												<td class="align-middle text-center text-sm">
-													<span class="text-secondary sex-empleado font-weight-bold">M</span>
-												</td>
-												<td class="align-middle text-center">
-													<span class="text-secondary text-xs font-weight-bold">04/10/21</span>
-												</td>
-												<td class="align-middle text-center">
-													<span class="text-secondary text-xs font-weight-bold">00465</span>
-												</td>
-												<td class="align-middle text-center">
-													<span class="text-secondary text-xs font-weight-bold">987654321</span>
-												</td>
-												<td class="align-middle text-center">
-													<div class="dropdown">
-														<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-															<i class="ri-more-2-fill"></i>
-														</button>
-														<div class="dropdown-menu menu-dropdown-b" style="">
-															<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-															<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
-														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<div class="d-flex px-3 py-1">
-														<div class="d-flex flex-column justify-content-center">
-															<h6 class="mb-0 text-sm">Persona Pruba</h6>
-															<p class="text-xs text-secondary mb-0">prueba@gmail.com</p>
-														</div>
-													</div>
-												</td>
-												<td class="align-middle text-center">
-													<div class="text-start">
-														<p class="text-xs text-secondary font-weight-bold mb-0">Manager</p>
-													</div>
-												</td>
-												<td class="align-middle text-center text-sm">
-													<span class="text-secondary sex-empleado font-weight-bold">M</span>
-												</td>
-												<td class="align-middle text-center">
-													<span class="text-secondary text-xs font-weight-bold">14/09/20</span>
-												</td>
-												<td class="align-middle text-center">
-													<span class="text-secondary text-xs font-weight-bold">00465</span>
-												</td>
-												<td class="align-middle text-center">
-													<span class="text-secondary text-xs font-weight-bold">987654321</span>
-												</td>
-												<td class="align-middle text-center">
-													<div class="dropdown">
-														<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-															<i class="ri-more-2-fill"></i>
-														</button>
-														<div class="dropdown-menu menu-dropdown-b" style="">
-															<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Editar</a>
-															<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Eliminar</a>
-														</div>
-													</div>
-												</td>
-											</tr>         																																
+																																										
 										</tbody>
 									</table>
 								</div>

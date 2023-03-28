@@ -22,20 +22,73 @@
 		<link rel="stylesheet" type="text/css" href="./css/main.css" />
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+		<link
+			  rel="stylesheet"
+			  href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+			  integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
+			  crossorigin="anonymous"
+			  referrerpolicy="no-referrer"
+			/>
 
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
 		<link rel="stylesheet" href="/resources/demos/style.css" />
 		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script
+			  src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
+			  integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
+			  crossorigin="anonymous"
+			  referrerpolicy="no-referrer"
+			></script>
+			
 		<script>
 			$( function() {
-			  $( "#fechaNacimiento" ).datepicker();
-			  $( "#menuSelect" ).selectmenu();
+			  
+			  
+			  $("#fechaNacimiento").flatpickr({ dateFormat: 'm/d/Y'});
+			  
+			  $("#selectMenuForm").selectize({
+		    	  plugins: {
+		    	    dropdown_header: {
+		    	        title: 'Selecciona sexo:'
+		    	    }
+		    	  },
+		    	});
+		    $("#cargoNuevo").selectize({
+		    	  plugins: {
+		    	    dropdown_header: {
+		    	        title: 'Selecciona cargo:'
+		    	    }
+		    	  },
+		    	});
 
 			} );
 		</script>
-		<title>Principal</title>
+		<title>Actualizar</title>
+		<style>
+			.selectize-dropdown .selected {
+		    background-color:hsl(206 6.0% 63.0%)  !important;
+		    
+		   
+		}
+		.selectize-dropdown .active {
+			background-color:hsl(206 6.0% 63.0%) !important;
+			
+		}
+		.selectize-input {
+		 background-color: #fff!important;
+     	 border-color: #EBEDF5 !important;
+		}
+		.selectize-control.single .selectize-input{
+			background-image: linear-gradient(to bottom,#ffff,#fff);
+			box-shadow: 0px 0px 0px -39px rgba(0,0,0,0.75);
+		-webkit-box-shadow: 0px 0px 0px -39px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 0px -39px rgba(0,0,0,0.75);	
+		
+		}
+		</style>
 	</head>
 	<body>
 		<!-- ======= Header(Cabezera) ======= -->
@@ -418,28 +471,21 @@
 											</div>
 											
 											<div class="mb-3">
-												<label class="form-label" for="sexoNuevo">Sexo</label>
-												<div class="input-group input-group-merge">
-													<span id="basic-icon-default-company2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-													<select id="sexoNuevo" name="sexoNuevo" class="form-select inputCustom borderColorInput" aria-label="Default select example">
-														<option selected>Selecciona</option>
-														<option value="M">M</option>
-														<option value="F">F</option>
-													</select>
-												</div>
+												<label class="form-label" for="selectMenuForm">Sexo:</label>
+												<select id="selectMenuForm" name="sexoNuevo" aria-label="Default select Ssex">
+												  <option value="M" selected>Masculino</option>
+												  <option value="F" selected>Femenino</option>
+												  <option value="H" selected>No se sabe</option>
+												</select>																	    
 											</div>
 											<div class="mb-3">
-												<label class="form-label" for="testNuevo">Cargo</label>
-												<div class="input-group input-group-merge">
-													<span id="basic-icon-default-company2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-													<select id="cargoNuevo" name="cargoNuevo" class="form-select inputCustom borderColorInput" aria-label="Default select example">
-														<option selected>Selecciona</option>
-														<c:forEach items="${listadoCargos}" var="cargo">
-															<option value="${cargo.idCargo}" selected> ${cargo.nombreCargo}</option>
-														</c:forEach>
-													</select>
-												</div>
-											</div>
+												<label class="form-label" for="cargoNuevo">Cargo:</label>
+													<select id="cargoNuevo" name="cargoNuevo"  aria-label="Default select example">
+														<c:forEach items="${listadoCargos}" var="cargo">											  		
+														  <option value="${cargo.idCargo}" selected> ${cargo.nombreCargo}</option>
+														</c:forEach>										  
+													</select>								    
+											</div>											
 											<button type="submit" class="btn btn-primary">Actualizar</button>
 										</form>
 									</div>

@@ -22,16 +22,21 @@
 		<link rel="stylesheet" type="text/css" href="./css/main.css" />
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
-
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+		
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
 		<link rel="stylesheet" href="/resources/demos/style.css" />
 		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+		
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
 
 		<script>
 			$( function() {
-			  $( "#fechaNacimiento" ).datepicker();
-			  $( "#menuSelect" ).selectmenu();
+				
+				$("#getFechaCompleted").flatpickr();
 
 			} );
 		</script>
@@ -303,7 +308,7 @@
 		<main id="main" class="main main-nuevoEmpleado">
 			<div class="content-wrapper">
 				<div class="container-xxl flex-grow-1 container-p-y">
-					<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Registrar/</span> Empleado</h4>
+					<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Registrar/</span> Proveedor</h4>
 					<div class="container-fluid py-4 responsive-container">
 						<div class="row">
 							<div class="col-xl">
@@ -315,7 +320,7 @@
 									<div class="card-body">
 										<form action="ControladorCrud?accion=nuevoEmpleado" method="post">
 											<div class="mb-3">
-												<label class="form-label" for="nombreNuevo">Nombre</label>
+												<label class="form-label" for="nombreNuevo">RUC</label>
 												<div class="input-group input-group-merge">
 													<span id="basic-icon-default-fullname2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
 													<input
@@ -330,7 +335,7 @@
 												</div>
 											</div>
 											<div class="mb-3">
-												<label class="form-label" for="apellidosNuevo">Apellidos</label>
+												<label class="form-label" for="apellidosNuevo">Razón Social</label>
 												<div class="input-group input-group-merge">
 													<span id="basic-icon-default-fullname22" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
 													<input
@@ -345,13 +350,13 @@
 												</div>
 											</div>
 											<div class="mb-3">
-												<label class="form-label" for="fechaNacimiento">Fecha Nacimiento</label>
+												<label class="form-label" for="getFechaCompleted">Categoria</label>
 												<div class="input-group input-group-merge">
 													<span id="basic-icon-default-company2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
 													<input
 														name="fechaNacimiento"
 														type="text"
-														id="fechaNacimiento"
+														id="getFechaCompleted"
 														class="form-control inputCustom borderColorInput"
 														placeholder="Fecha"
 														aria-label="0000-00-00"
@@ -360,7 +365,7 @@
 												</div>
 											</div>
 											<div class="mb-3" id="">
-												<label class="form-label" for="basic-icon-default-company">Sexo</label>
+												<label class="form-label" for="basic-icon-default-company">Tipo Solicitud</label>
 												<div class="input-group input-group-merge">
 													<span id="basic-icon-default-company23" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
 													<input
@@ -405,74 +410,7 @@
 													/>
 												</div>
 											</div>
-											<div class="mb-3">
-												<label class="form-label labelCustom" for="telefonoNuevo">Teléfono</label>
-												<div class="input-group input-group-merge">
-													<span id="basic-icon-default-phone2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-													<input
-														name="telefonoNuevo"
-														type="text"
-														id="telefonoNuevo"
-														class="form-control phone-mask inputCustom borderColorInput"
-														placeholder="964 359 072"
-														aria-label="658 799 8941"
-														aria-describedby="basic-icon-default-phone2"
-													/>
-												</div>
-											</div>
-											<div class="mb-3">
-												<label class="form-label labelCustom" for="cargoNuevo">Cargo</label>
-												<div class="input-group input-group-merge">
-													<span id="basic-icon-default-phone25" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-													<input
-														name="cargoPrueba"
-														type="text"
-														id="cargoNuevot"
-														class="form-control phone-mask inputCustom borderColorInput"
-														placeholder="select"
-														aria-label="Admin"
-														aria-describedby="basic-icon-default-cargo"
-													/>
-												</div>
-											</div>
-											<div class="mb-3">
-												<label class="form-label" for="sexoNuevo">Sexo</label>
-												<div class="input-group input-group-merge">
-													<span id="basic-icon-default-company24" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-													<select id="sexoNuevo" name="sexoNuevo" class="form-select inputCustom borderColorInput" aria-label="Default select example">
-														<option selected>Selecciona</option>
-														<option value="M">M</option>
-														<option value="F">F</option>
-													</select>
-												</div>
-											</div>
-											<div class="mb-3">
-												<label class="form-label" for="cargoNuevo">Cargo</label>
-												<div class="input-group input-group-merge">
-													<span id="basic-icon-default-company26" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-													<select id="cargoNuevo" name="cargoNuevo" class="form-select inputCustom borderColorInput" aria-label="Default select example">
-														<option selected>Selecciona</option>
-														<c:forEach items="${listadoCargos}" var="cargo">
-															<option value="${cargo.idCargo}"> ${cargo.nombreCargo}</option>
-														</c:forEach>
-													</select>
-												</div>
-											</div>
-
-											<div class="mb-3">
-												<label class="form-label" for="textoNuevo">Message</label>
-												<div class="input-group input-group-merge">
-													<span id="basic-icon-default-message2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-													<textarea
-														name="textoNuevo"
-														id="textoNuevo"
-														class="form-control inputCustom borderColorInput"
-														placeholder="Escribe el texto que desas decir xD"
-														aria-label="Hi, Do you have a moment to talk igme?"
-														aria-describedby="basic-icon-default-message"
-													></textarea>
-												</div>
-											</div>
+																															
 											<button type="submit" class="btn btn-primary">Registrar</button>
 										</form>
 									</div>

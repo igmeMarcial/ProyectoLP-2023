@@ -85,8 +85,21 @@ public class CrudEmpleado implements IntEmpleado{
 
 	@Override
 	public void EliminarEmpleado(Empleado em) {
-		
-		
+
+		String sql="delete from empleado where idEmpleado=?";
+		PreparedStatement ps=null;
+		try {
+			ps=ConectarBD.conexion().prepareStatement(sql);	
+			ps.setInt(1,em.getIdEmpleado());		
+			int y=ps.executeUpdate();	
+			if(y>0){
+				System.out.println("Registro ELIMINADO de la BD");			
+			}else {		
+				System.out.println("Registro NO ELMINADO de la BD");			
+			} 					
+		} catch (SQLException e) {			
+			e.printStackTrace();
+		}					
 	}
 
 	@Override
