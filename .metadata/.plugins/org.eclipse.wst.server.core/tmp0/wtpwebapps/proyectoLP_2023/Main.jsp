@@ -186,10 +186,10 @@
 					<a class="nav-link collapsed" data-bs-target="#provaider-nav" data-bs-toggle="collapse" href="#"> <i class="ri-slideshow-line"></i><span>Proveedor</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="provaider-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Agregar nuevo Proveedor</span> </a>
+							<a href="ControladorProveedor?accion=registrarProveedor"> <i class="bi bi-circle"></i><span>Agregar nuevo Proveedor</span> </a>
 						</li>
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Listar Proveedores</span> </a>
+							<a href="ControladorProveedor?accion=listarProveedores"> <i class="bi bi-circle"></i><span>Listar Proveedores</span> </a>
 						</li>
 					</ul>
 				</li>

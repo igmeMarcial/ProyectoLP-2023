@@ -46,3 +46,35 @@ INSERT INTO `cargo` (`idCargo`, `NombreCargo`, `estado`) VALUES
 
 
 select c.idCargo, c.NombreCargo, c.estado from cargo c order by c.idCargo;
+
+DROP TABLE IF EXISTS `proveedor`;
+ SET character_set_client = utf8mb4 ;
+ CREATE TABLE `proveedor` (
+  `idProveedor` int NOT NULL AUTO_INCREMENT,
+  `ruc` varchar(11) NOT NULL,
+  `razonSocial` varchar(200) NOT NULL,
+  `categoria` varchar(100) NOT NULL,
+  `tipoSolicitud` varchar(255) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `telefono` varchar(50) NOT NULL,
+  PRIMARY KEY (`idProveedor`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+INSERT INTO `proveedor` (`ruc`, `razonSocial`, `categoria`, `tipoSolicitud`, `email`, `telefono`)
+VALUES 
+('12345678901', 'Proveedor A', 'Categoría X', 'Solicitud Tipo 1', 'proveedora@example.com', '1234567890'),
+('23456789012', 'Proveedor B', 'Categoría Y', 'Solicitud Tipo 2', 'proveedorb@example.com', '2345678901'),
+('34567890123', 'Proveedor C', 'Categoría Z', 'Solicitud Tipo 3', 'proveedorc@example.com', '3456789012'),
+('45678901234', 'Proveedor D', 'Categoría X', 'Solicitud Tipo 2', 'proveedord@example.com', '4567890123'),
+('56789012345', 'Proveedor E', 'Categoría Y', 'Solicitud Tipo 1', 'proveedore@example.com', '5678901234'),
+('67890123456', 'Proveedor F', 'Categoría Z', 'Solicitud Tipo 3', 'proveedorf@example.com', '6789012345'),
+('78901234567', 'Proveedor G', 'Categoría X', 'Solicitud Tipo 2', 'proveedorg@example.com', '7890123456'),
+('89012345678', 'Proveedor H', 'Categoría Y', 'Solicitud Tipo 1', 'proveedorh@example.com', '8901234567'),
+('90123456789', 'Proveedor I', 'Categoría Z', 'Solicitud Tipo 3', 'proveedori@example.com', '9012345678'),
+('01234567890', 'Proveedor J', 'Categoría X', 'Solicitud Tipo 2', 'proveedorj@example.com', '0123456789');
+
+select p.idProveedor, p.ruc, p.razonSocial, p.categoria, p.tipoSolicitud, p.email, p.telefono from proveedor p;
+
+
+

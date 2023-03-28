@@ -86,7 +86,11 @@ textarea:-ms-input-placeholder
    opacity: 1 !important;
 }
 
-
+#emailNuevo{
+	border-right:0 !important;
+	 border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
 
 .inputCustom{
 	
@@ -128,16 +132,13 @@ textarea:-ms-input-placeholder
       border-color: #EBEDF5 !important;
        border-left:0 !important;
 }
+
 textarea{
 	height: 80px !important;
 	resize:none !important;
 }
 
-#default-email{
-	border-right:0 !important;
-	 border-top-right-radius: 0px !important;
-    border-bottom-right-radius: 0px !important;
-}
+
 .card{
 	    border: 0 solid #d9dee3 !important;
 	    border-radius: 12px !important;

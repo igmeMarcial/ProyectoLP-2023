@@ -23,4 +23,7 @@
 <fullyQualifiedTypeName name="Dao.CrudEmpleado"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.text.DateFormat"/>
+<fullyQualifiedTypeName name="Interfaces.IntProveedor"/>
+<fullyQualifiedTypeName name="Modelo.Proveedor"/>
+<fullyQualifiedTypeName name="Dao.CrudProveedor"/>
 </qualifiedTypeNameHistroy>

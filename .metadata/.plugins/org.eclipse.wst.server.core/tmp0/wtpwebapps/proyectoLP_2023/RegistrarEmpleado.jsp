@@ -191,10 +191,10 @@
 					<a class="nav-link collapsed" data-bs-target="#category-nav" data-bs-toggle="collapse" href="#"> <i class="ri-stack-line"></i><span>Categoria</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="category-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Agregar nuevo Categoria</span> </a>
+							<a href="ControladorCategoria?accion=registrarCategoria"> <i class="bi bi-circle"></i><span>Agregar nuevo Categoria</span> </a>
 						</li>
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Listar Categorias</span> </a>
+							<a href="ControladorCategoria?accion=listarCategorias"> <i class="bi bi-circle"></i><span>Listar Categorias</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -204,10 +204,10 @@
 					<a class="nav-link collapsed" data-bs-target="#provaider-nav" data-bs-toggle="collapse" href="#"> <i class="ri-slideshow-line"></i><span>Proveedor</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="provaider-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Agregar nuevo Proveedor</span> </a>
+							<a href="ControladorProveedor?accion=registrarProveedor"> <i class="bi bi-circle"></i><span>Agregar nuevo Proveedor</span> </a>
 						</li>
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Listar Proveedores</span> </a>
+							<a href="ControladorProveedor?accion=listarProveedores"> <i class="bi bi-circle"></i><span>Listar Proveedores</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -217,10 +217,10 @@
 					<a class="nav-link collapsed" data-bs-target="#inventory-nav" data-bs-toggle="collapse" href="#"> <i class="ri-todo-line"></i><span>Inventario</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="inventory-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Agregar Inventario Nuevo</span> </a>
+							<a href="ControladorInvetario?accion=registrarInventario"> <i class="bi bi-circle"></i><span>Agregar Inventario Nuevo</span> </a>
 						</li>
 						<li>
-							<a href="#"> <i class="bi bi-circle"></i><span>Listar Inventarios</span> </a>
+							<a href="ControladorInventario?accion=listarInventarios"> <i class="bi bi-circle"></i><span>Listar Inventarios</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -230,10 +230,10 @@
 					<a class="nav-link collapsed" data-bs-target="#team-nav" data-bs-toggle="collapse" href="#"> <i class="ri-book-open-line"></i><span>Equipo</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="team-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="icons-bootstrap.html"> <i class="bi bi-circle"></i><span>Agregar nuevo Equipo</span> </a>
+							<a href="ControladorEquipo?accion=registrarEquipo"> <i class="bi bi-circle"></i><span>Agregar nuevo Equipo</span> </a>
 						</li>
 						<li>
-							<a href="icons-remix.html"> <i class="bi bi-circle"></i><span>Listar Equipos</span> </a>
+							<a href="ControladorEquipo?accion=registrarEquipos"> <i class="bi bi-circle"></i><span>Listar Equipos</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -242,10 +242,10 @@
 					<a class="nav-link collapsed" data-bs-target="#details-nav" data-bs-toggle="collapse" href="#"> <i class="ri-numbers-line"></i><span>Detalles</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="details-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="icons-bootstrap.html"> <i class="bi bi-circle"></i><span>Entradas</span> </a>
+							<a href="ControladorDetalle?accion=entradas"> <i class="bi bi-circle"></i><span>Entradas</span> </a>
 						</li>
 						<li>
-							<a href="icons-remix.html"> <i class="bi bi-circle"></i><span>Salidas</span> </a>
+							<a href="ControladorDetalle?accion=salidas"> <i class="bi bi-circle"></i><span>Salidas</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -350,7 +350,7 @@
 										<label class="form-label" for="emailNuevo">Email</label>
 										<div class="input-group input-group-merge">
 											<span class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input name="emailNuevo" type="text" id="emailNuevo" class="form-control inputCustom borderColorInput" placeholder="ejemplo.@gmail.com" aria-label="example.gmail.com" aria-describedby="basic-icon-default-email2" />
+											<input name="emailNuevo" type="text" id="emailNuevo" class="form-control inputCustom borderColorInput " placeholder="ejemplo.@gmail.com" aria-label="example.gmail.com" aria-describedby="basic-icon-default-email2" />
 											<span id="basic-icon-default-email2" class="input-group-text labelCustomEmail borderColorInput">@example.com</span>
 										</div>
 										<div class="form-text">Puedes usar letras, números puntos</div>
