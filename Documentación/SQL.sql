@@ -7,6 +7,16 @@ CREATE TABLE `usuario` (
   `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE `cargo` (
+  `idCargo` int (11) not null,
+  `NombreCargo` varchar(20) DEFAULT NULL,
+  `estado` bit(1) DEFAULT NULL,
+    PRIMARY KEY (`idCargo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `cargo` (`idCargo`, `NombreCargo`, `estado`) VALUES
+(1, 'ADMINISTRADOR', '1'),
+(2, 'VENDEDOR', '1');
 
 DROP TABLE IF EXISTS `empleado`;
  SET character_set_client = utf8mb4 ;
@@ -31,20 +41,6 @@ INSERT INTO `empleado` ( `nombre`,`apellidos`, `sexo`, `fechaNacimiento`, `telef
 ('Joss', 'Paucarpura', 'F', '2000-05-28', '055545','joss@ngr.com.pe',2);
 
 select e.idEmpleado,e.nombre, e.apellidos,e.sexo,e.fechaNacimiento,e.telefono,e.celular,e.email,c.NombreCargo from empleado e inner join cargo c on c.idCargo = e.idCargo order by e.idEmpleado;
-
-
-
-CREATE TABLE `cargo` (
-  `idCargo` int (11) not null,
-  `NombreCargo` varchar(20) DEFAULT NULL,
-  `estado` bit(1) DEFAULT NULL,
-    PRIMARY KEY (`idCargo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-INSERT INTO `cargo` (`idCargo`, `NombreCargo`, `estado`) VALUES
-(1, 'ADMINISTRADOR', '1'),
-(2, 'VENDEDOR', '1');
-
 
 select c.idCargo, c.NombreCargo, c.estado from cargo c order by c.idCargo;
 

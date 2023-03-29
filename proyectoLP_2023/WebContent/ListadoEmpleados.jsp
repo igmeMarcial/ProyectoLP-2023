@@ -26,7 +26,12 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
 		
-		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		
+		<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
+		
+		 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		 
+		
 		
 	</head>
 	<body>
@@ -107,7 +112,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>My Perfil</span>
 								</a>
@@ -117,7 +122,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>Configuración</span>
 								</a>
@@ -127,7 +132,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>Ayuda?</span>
 								</a>
@@ -179,10 +184,10 @@
 					<a class="nav-link collapsed" data-bs-target="#category-nav" data-bs-toggle="collapse" href="#"> <i class="ri-stack-line"></i><span>Categoria</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="category-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="ControladorCrud?accion=registrarCategoria"> <i class="bi bi-circle"></i><span>Agregar nuevo Categoria</span> </a>
+							<a href="ControladorCategoria?accion=registrarCategoria"> <i class="bi bi-circle"></i><span>Agregar nuevo Categoria</span> </a>
 						</li>
 						<li>
-							<a href="ControladorCrud?accion=listarCategorias"> <i class="bi bi-circle"></i><span>Listar Categorias</span> </a>
+							<a href="ControladorCategoria?accion=listarCategorias"> <i class="bi bi-circle"></i><span>Listar Categorias</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -192,10 +197,10 @@
 					<a class="nav-link collapsed" data-bs-target="#provaider-nav" data-bs-toggle="collapse" href="#"> <i class="ri-slideshow-line"></i><span>Proveedor</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="provaider-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="ControladorCrud?accion=registrarProveedor"> <i class="bi bi-circle"></i><span>Agregar nuevo Proveedor</span> </a>
+							<a href="ControladorProveedor?accion=registrarProveedor"> <i class="bi bi-circle"></i><span>Agregar nuevo Proveedor</span> </a>
 						</li>
 						<li>
-							<a href="ControladorCrud?accion=listarProveedores"> <i class="bi bi-circle"></i><span>Listar Proveedores</span> </a>
+							<a href="ControladorProveedor?accion=listarProveedores"> <i class="bi bi-circle"></i><span>Listar Proveedores</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -205,10 +210,10 @@
 					<a class="nav-link collapsed" data-bs-target="#inventory-nav" data-bs-toggle="collapse" href="#"> <i class="ri-todo-line"></i><span>Inventario</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="inventory-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="ControladorCrud?accion=registrarInventario"> <i class="bi bi-circle"></i><span>Agregar Inventario Nuevo</span> </a>
+							<a href="ControladorInventario?accion=registrarInventario"> <i class="bi bi-circle"></i><span>Agregar Inventario Nuevo</span> </a>
 						</li>
 						<li>
-							<a href="ControladorCrud?accion=listarInventario"> <i class="bi bi-circle"></i><span>Listar Inventarios</span> </a>
+							<a href="ControladorInventario?accion=listarInventario"> <i class="bi bi-circle"></i><span>Listar Inventarios</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -218,10 +223,10 @@
 					<a class="nav-link collapsed" data-bs-target="#team-nav" data-bs-toggle="collapse" href="#"> <i class="ri-book-open-line"></i><span>Equipo</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="team-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="ControladorCrud?accion=registrarEquipo"> <i class="bi bi-circle"></i><span>Agregar nuevo Equipo</span> </a>
+							<a href="ControladorEquipo?accion=registrarEquipo"> <i class="bi bi-circle"></i><span>Agregar nuevo Equipo</span> </a>
 						</li>
 						<li>
-							<a href="ControladorCrud?accion=listarEquipos"> <i class="bi bi-circle"></i><span>Listar Equipos</span> </a>
+							<a href="ControladorEquipo?accion=listarEquipos"> <i class="bi bi-circle"></i><span>Listar Equipos</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -230,10 +235,10 @@
 					<a class="nav-link collapsed" data-bs-target="#details-nav" data-bs-toggle="collapse" href="#"> <i class="ri-numbers-line"></i><span>Detalles</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="details-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="ControladorCrud?accion=entradas"> <i class="bi bi-circle"></i><span>Entradas</span> </a>
+							<a href="ControladorDetalles?accion=entradas"> <i class="bi bi-circle"></i><span>Entradas</span> </a>
 						</li>
 						<li>
-							<a href="ControladorCrud?accion=salidas"> <i class="bi bi-circle"></i><span>Salidas</span> </a>
+							<a href="ControladorDetalles?accion=salidas"> <i class="bi bi-circle"></i><span>Salidas</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -358,10 +363,13 @@
                                                    </c:url>"><i class="ri-edit-line"></i> Editar</a>
                                                    
                                                    			<input type="hidden" id="codigo"  value="${empleado.idEmpleado }">
-															<a id="deleteData" class="dropdown-item" href="<c:url value="controladorCrud">
+															<a id="deleteData" class="dropdown-item" href="<c:url value="ControladorCrud">
 															<c:param name="accion" value="eliminarEmpleado"/> 
-															<c:param  name="idDelete" value="${empleado.idEmpleado}"/></c:url>">
-															<i class="ri-delete-bin-line"></i> Eliminar</a>
+															<c:param  name="cod" value="${empleado.idEmpleado}"/>
+															</c:url>"><i class="ri-delete-bin-line"></i> Eliminar</a>
+															
+															
+														
 														</div>
 													</div>
 												</td>
@@ -457,10 +465,58 @@
 		<!-- End Footer -->
 
 		<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-		<!-- Sistema JS Files -->
-
+		<!-- Sistema JS Files -->		
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 		<script src="./script/main.js" type="text/javascript"></script>
+		
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+		
+		
+		
+		<script>
+
+		$(document).ready(function(){
+			
+			
+			$("tr #deleteData").click(function (e){
+				e.preventDefault();
+				var cod = $(this).parent().find("#codigo").val();	
+				Swal.fire({
+					  title: '¿Estás seguro?',
+					  text: "¡No podrás deshacer esto!",
+					  icon: 'warning',
+					  showCancelButton: true,
+					  confirmButtonColor: '#3085d6',
+					  cancelButtonColor: '#d33',
+					  confirmButtonText: 'Yes, delete it!'
+					}).then(function(result) {
+					  if (result.isConfirmed) {
+						  eliminar(cod);
+					    Swal.fire(
+					      '¡Borrado!',
+					      'El archivo ha sido borrado.',
+					      'success'
+					    )
+					    setTimeout(function(){
+					    	parent.location.href = "ControladorCrud?accion=listarEmpleados"
+					    },1800);
+					  }
+					})									
+			})
+			function eliminar (cod){		
+				var url = "ControladorCrud?accion=eliminarEmpleado&cod=" + cod;			
+				$.ajax({
+					type: 'POST',
+					url: url,
+					async: true,
+					success: function(r){				
+					}
+				});
+			}
+			
+		})
+		</script>
+		 
 	</body>
 </html>
     

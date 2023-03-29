@@ -101,7 +101,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>Mi Perfil</span>
 								</a>
@@ -111,7 +111,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>Configuración</span>
 								</a>
@@ -121,7 +121,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>Ayuda?</span>
 								</a>
@@ -236,7 +236,7 @@
 				<li class="nav-heading">Configuraciones</li>
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="perfil.jsp">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=perfil">
 						<i class="ri-file-chart-line"></i>
 						<span>Perfil</span>
 					</a>
@@ -244,7 +244,7 @@
 				<!-- Final Profile Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=empresa">
 						<i class="ri-file-chart-line"></i>
 						<span>Empresa</span>
 					</a>
@@ -252,7 +252,7 @@
 				<!-- End F.A.Q Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=contacto">
 						<i class="ri-file-chart-line"></i>
 						<span>Contacto</span>
 					</a>
@@ -260,7 +260,7 @@
 				<!-- Final Contact Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=registro">
 						<i class="ri-file-chart-line"></i>
 						<span>Registro</span>
 					</a>
@@ -268,7 +268,7 @@
 				<!-- Final Registro Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=login">
 						<i class="ri-file-chart-line"></i>
 						<span>Login</span>
 					</a>
@@ -276,7 +276,7 @@
 				<!-- Final Login Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=error">
 						<i class="ri-file-chart-line"></i>
 						<span>Error 404</span>
 					</a>

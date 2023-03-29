@@ -25,6 +25,8 @@
 	
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 		
+		<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
+			
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
 		<link rel="stylesheet" href="/resources/demos/style.css" />
 		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -120,7 +122,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>My Perfil</span>
 								</a>
@@ -130,7 +132,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>Configuración</span>
 								</a>
@@ -140,7 +142,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>Ayuda?</span>
 								</a>
@@ -255,7 +257,7 @@
 				<li class="nav-heading">Configuraciones</li>
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="perfil.jsp">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=perfil">
 						<i class="ri-file-chart-line"></i>
 						<span>Perfil</span>
 					</a>
@@ -263,7 +265,7 @@
 				<!-- Final Profile Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=empresa">
 						<i class="ri-file-chart-line"></i>
 						<span>Empresa</span>
 					</a>
@@ -271,7 +273,7 @@
 				<!-- End F.A.Q Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=contacto">
 						<i class="ri-file-chart-line"></i>
 						<span>Contacto</span>
 					</a>
@@ -279,7 +281,7 @@
 				<!-- Final Contact Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=registro">
 						<i class="ri-file-chart-line"></i>
 						<span>Registro</span>
 					</a>
@@ -287,7 +289,7 @@
 				<!-- Final Registro Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=login">
 						<i class="ri-file-chart-line"></i>
 						<span>Login</span>
 					</a>
@@ -295,7 +297,7 @@
 				<!-- Final Login Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=error">
 						<i class="ri-file-chart-line"></i>
 						<span>Error 404</span>
 					</a>
@@ -331,6 +333,7 @@
 														placeholder="Marcial"
 														aria-label="Marcial"
 														aria-describedby="basic-icon-default-fullname"
+														required
 													/>
 												</div>
 											</div>
@@ -346,6 +349,7 @@
 														placeholder="Apellidos"
 														aria-label="apellido"
 														aria-describedby="basic-icon-default-fullname2"
+														required
 													/>
 												</div>
 											</div>
@@ -361,6 +365,7 @@
 														placeholder="Fecha"
 														aria-label="0000-00-00"
 														aria-describedby="basic-icon-default-fechaNac"
+														required
 													/>
 												</div>
 											</div>
@@ -375,6 +380,7 @@
 														placeholder="Sexo"
 														aria-label="ACME Inc."
 														aria-describedby="basic-icon-default-company2"
+														required
 													/>
 												</div>
 											</div>
@@ -390,6 +396,7 @@
 														placeholder="ejemplo.@gmail.com"
 														aria-label="example.gmail.com"
 														aria-describedby="basic-icon-default-email2"
+														required
 													/>
 													<span id="basic-icon-default-email2" class="input-group-text labelCustomEmail borderColorInput">@example.com</span>
 												</div>
@@ -407,6 +414,7 @@
 														placeholder="658 799 8941"
 														aria-label="658 799 8941"
 														aria-describedby="basic-icon-default-phone"
+														required
 													/>
 												</div>
 											</div>
@@ -502,5 +510,6 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 		<script src="./script/main.js" type="text/javascript"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
 	</body>
 </html>

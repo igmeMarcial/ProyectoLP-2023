@@ -26,15 +26,13 @@
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
 		
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-		<link
-			  rel="stylesheet"
-			  href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
 			  integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
 			  crossorigin="anonymous"
-			  referrerpolicy="no-referrer"
-			/>
+			  referrerpolicy="no-referrer"/>
 			
-		
+		<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
+			
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 		  <link rel="stylesheet" href="/resources/demos/style.css">
 		  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -52,7 +50,7 @@
 		  $( function() {
 		    $( "#fechaNacimiento" ).datepicker();
 		    $( "#menuSelect" ).selectmenu();
-		    $("#getFechaCompleted").flatpickr({ dateFormat: 'm/d/Y'});
+		    $("#getFechaCompleted").flatpickr({ dateFormat: 'Y/m/d'});
 		   
 		    $("#selectMenuForm").selectize({
 		    	  plugins: {
@@ -173,7 +171,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>My Perfil</span>
 								</a>
@@ -183,7 +181,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>Configuración</span>
 								</a>
@@ -193,7 +191,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="perfil.jsp">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>Ayuda?</span>
 								</a>
@@ -308,7 +306,7 @@
 				<li class="nav-heading">Configuraciones</li>
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="perfil.jsp">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=perfil">
 						<i class="ri-file-chart-line"></i>
 						<span>Perfil</span>
 					</a>
@@ -316,7 +314,7 @@
 				<!-- Final Profile Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=empresa">
 						<i class="ri-file-chart-line"></i>
 						<span>Empresa</span>
 					</a>
@@ -324,7 +322,7 @@
 				<!-- End F.A.Q Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=contacto">
 						<i class="ri-file-chart-line"></i>
 						<span>Contacto</span>
 					</a>
@@ -332,7 +330,7 @@
 				<!-- Final Contact Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=registro">
 						<i class="ri-file-chart-line"></i>
 						<span>Registro</span>
 					</a>
@@ -340,7 +338,7 @@
 				<!-- Final Registro Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=perfil">
 						<i class="ri-file-chart-line"></i>
 						<span>Login</span>
 					</a>
@@ -348,7 +346,7 @@
 				<!-- Final Login Page Nav -->
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="#">
+					<a class="nav-link collapsed" href="ControladorCrud?accion=error">
 						<i class="ri-file-chart-line"></i>
 						<span>Error 404</span>
 					</a>
@@ -376,28 +374,31 @@
 										<label class="form-label" for="nombreNuevo">Nombre</label>
 										<div class="input-group input-group-merge">
 											<span id="basic-icon-default-fullname2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input name="nombreNuevo" type="text" class="form-control inputCustom borderColorInput" id="nombreNuevo" placeholder="Marcial" aria-label="Marcial" aria-describedby="basic-icon-default-fullname" />
+											<input name="nombreNuevo" type="text" class="form-control inputCustom borderColorInput" id="nombreNuevo" placeholder="Marcial" aria-label="Marcial" aria-describedby="basic-icon-default-fullname"  required/>
+											<div class="valid-feedback">
+										      Looks good!
+										    </div>
 										</div>
 									</div>
 									<div class="mb-3">
 										<label class="form-label" for="apellidosNuevo">Apellidos</label>
 										<div class="input-group input-group-merge">
 											<span id="basic-icon-default-fullname2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input name="apellidosNuevo" type="text" class="form-control inputCustom borderColorInput" id="apellidosNuevo" placeholder="Apellidos" aria-label="apellido" aria-describedby="basic-icon-default-fullname2" />
+											<input name="apellidosNuevo" type="text" class="form-control inputCustom borderColorInput" id="apellidosNuevo" placeholder="Apellidos" aria-label="apellido" aria-describedby="basic-icon-default-fullname2" required/>
 										</div>
 									</div>
 									<div class="mb-3">
 										<label class="form-label" for="getFechaCompleted">Fecha Nacimiento</label>
 										<div class="input-group input-group-merge">
 											<span id="basic-icon-default-company2" class="input-group-text labelCustom borderColorInput" ><i class="ri-folder-add-line"></i></span>
-											<input name="fechaNacimiento" type="text" id="getFechaCompleted" class="form-control inputCustom borderColorInput" placeholder="Fecha" aria-label="0000-00-00" aria-describedby="basic-icon-default-fechaNac" />
+											<input name="fechaNacimiento" type="text" id="getFechaCompleted" class="form-control inputCustom borderColorInput" placeholder="Fecha" aria-label="0000-00-00" aria-describedby="basic-icon-default-fechaNac" required/>
 										</div>
 									</div>									
 									<div class="mb-3">
 										<label class="form-label" for="emailNuevo">Email</label>
 										<div class="input-group input-group-merge">
 											<span class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input name="emailNuevo" type="text" id="emailNuevo" class="form-control inputCustom borderColorInput " placeholder="ejemplo.@gmail.com" aria-label="example.gmail.com" aria-describedby="basic-icon-default-email2" />
+											<input name="emailNuevo" type="text" id="emailNuevo" class="form-control inputCustom borderColorInput " placeholder="ejemplo.@gmail.com" aria-label="example.gmail.com" aria-describedby="basic-icon-default-email2" required/>
 											<span id="basic-icon-default-email2" class="input-group-text labelCustomEmail borderColorInput">@example.com</span>
 										</div>
 										<div class="form-text">Puedes usar letras, números puntos</div>
@@ -406,20 +407,20 @@
 										<label class="form-label labelCustom" for="celularNuevo" >Celular</label>
 										<div class="input-group input-group-merge">
 											<span id="celularNuevo" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input name="celularNuevo" type="text" id="basic-icon-default-phone" class="form-control phone-mask inputCustom borderColorInput" placeholder="658 799 8941" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone" />
+											<input name="celularNuevo" type="text" id="basic-icon-default-phone" class="form-control phone-mask inputCustom borderColorInput" placeholder="658 799 8941" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone" required/>
 										</div>
 									</div>
 									<div class="mb-3">
 										<label class="form-label labelCustom" for="telefonoNuevo">Teléfono</label>
 										<div class="input-group input-group-merge">
 											<span id="basic-icon-default-phone2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input name="telefonoNuevo" type="text" id="telefonoNuevo" class="form-control phone-mask inputCustom borderColorInput" placeholder="964 359 072" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2" />
+											<input name="telefonoNuevo" type="text" id="telefonoNuevo" class="form-control phone-mask inputCustom borderColorInput" placeholder="964 359 072" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2" required/>
 										</div>
 									</div>
 																																													
 									<div class="mb-3">
 										<label class="form-label" for="selectMenuForm">Sexo:</label>
-										<select id="selectMenuForm" name="sexoNuevo" aria-label="Default select Ssex">
+										<select id="selectMenuForm" name="sexoNuevo" aria-label="Default select Ssex" required>
 										  <option value="M" selected>Masculino</option>
 										  <option value="F" selected>Femenino</option>
 										  <option value="H" selected>No se sabe</option>
@@ -427,7 +428,7 @@
 									</div>
 									<div class="mb-3">
 										<label class="form-label" for="cargoNuevo">Cargo:</label>
-											<select id="cargoNuevo" name="cargoNuevo"  aria-label="Default select example">
+											<select id="cargoNuevo" name="cargoNuevo"  aria-label="Default select example" required>
 												<c:forEach items="${listadoCargos}" var="cargo">											  		
 												  <option value="${cargo.idCargo}"> ${cargo.nombreCargo}</option>
 												</c:forEach>										  
@@ -435,7 +436,7 @@
 									</div>
 									
 								
-									<button type="submit" class="btn btn-primary">Registrar</button>
+									<button id="submitRegister" type="submit" class="btn btn-primary">Registrar</button>
 								</form>
 							</div>
 						</div>
@@ -529,6 +530,23 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 		<script src="./script/main.js" type="text/javascript"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+		<script>
+		/*
+			$(document).ready(function(){
+			
+			$("#submitRegister").click(function (e){
+				Swal.fire({
+					  position: 'top-end',
+					  icon: 'success',
+					  title: 'Registrado con éxito!',
+					  showConfirmButton: false,
+					  timer: 1500
+					})
+			})
+			})
+			*/
+		</script>
 	</body>
 </html>
     

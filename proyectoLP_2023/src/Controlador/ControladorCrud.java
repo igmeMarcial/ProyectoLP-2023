@@ -79,8 +79,8 @@ public class ControladorCrud extends HttpServlet {
 	private void eliminarUsuario(HttpServletRequest request, HttpServletResponse response) {
 		Empleado em = new Empleado();
 		CrudEmpleado crud =new CrudEmpleado();
-		String id = request.getParameter("idDelete");
-		
+		String id = request.getParameter("cod");
+		 System.out.println("id=> : "+ id);
 			
 		if(id != null){
 			
@@ -130,12 +130,11 @@ public class ControladorCrud extends HttpServlet {
 			
 			
 			 DateFormat sdf = new  SimpleDateFormat("yyyy-MM-dd");
-			 DateFormat inputFormat = new SimpleDateFormat("dd/MM/yyyy");
+			 DateFormat inputFormat = new SimpleDateFormat("yyyy/MM/dd");
 			 try {
 				 Date date = inputFormat.parse(fechaN);
 				 String dt = sdf.format(date);
-				 System.out.println("date:"+date);
-				 System.out.println("dateParseado:"+dt);
+				
 				 
 				 em.setFechaNacimiento(date);
 				} catch (ParseException e) {
@@ -251,7 +250,7 @@ public class ControladorCrud extends HttpServlet {
 			em.setApellidos(apellidos);
 			em.setSexo(sexo);
 			
-			SimpleDateFormat fechafor=new SimpleDateFormat("dd/MM/yyyy");
+			SimpleDateFormat fechafor=new SimpleDateFormat("yyyy/MM/dd");
 			Date fecha;
 			 try {
 				fecha=fechafor.parse(fechaN);
