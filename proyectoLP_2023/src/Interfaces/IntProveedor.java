@@ -10,5 +10,5 @@ public interface IntProveedor {
 	public void ActualizarProveedor(Proveedor prov);
 	public void EliminarProveedor(Proveedor prov);
 	public List<Proveedor> ListarProveedores();
-	public Proveedor BuscarProveedor(Proveedor em);
+	public Proveedor BuscarProveedor(Proveedor prov);
 }

@@ -1,5 +1,7 @@
 CREATE DATABASE  proyectoLP;
 
+USE  proyectoLP;
+
 CREATE TABLE `usuario` (
   `idUsuario` int auto_increment primary key,
   `userName` varchar(255) NOT NULL,
@@ -75,6 +77,31 @@ VALUES
 select p.idProveedor, p.ruc, p.razonSocial, p.categoria, p.tipoSolicitud, p.email, p.telefono from proveedor p;
 
 
+DROP TABLE IF EXISTS `equipo`;
+ SET character_set_client = utf8mb4 ;
+ CREATE TABLE `equipo` (
+  `idEquipo` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(200) NOT NULL,
+  `marca` varchar(100) NOT NULL,
+    `modelo` varchar(100) NOT NULL,
+      `tipo` smallint(6) NOT NULL DEFAULT '0',
+  `serie` varchar(50) NOT NULL,
+  `ip` varchar(50) NOT NULL,
+  PRIMARY KEY (`idEquipo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+DROP TABLE IF EXISTS `detalleEquipo`;
+SET character_set_client = utf8mb4 ;
+CREATE TABLE `detalleEquipo` (
+  `iddetalleEquipo` int NOT NULL AUTO_INCREMENT,
+  `garantia` varchar(200) NOT NULL,
+  `unidadStock` smallint(6) NOT NULL DEFAULT '0',
+  `descripcion` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`iddetalleEquipo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
 -- exec correct
 
 DROP TABLE IF EXISTS `categoria`;
@@ -92,46 +119,10 @@ CREATE TABLE `detalleAtencion` (
   `iddetalleAtencion` int NOT NULL AUTO_INCREMENT,
   `estado` varchar(200) NOT NULL,
   `descripcion` text COLLATE utf8mb4_unicode_ci,
-  PRIMARY KEY (`idCategoria`)
+  PRIMARY KEY (`iddetalleAtencion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
-DROP TABLE IF EXISTS `ticket`;
- SET character_set_client = utf8mb4 ;
- CREATE TABLE `ticket` (
-  `idTicket` int NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(75) COLLATE utf8mb4_unicode_ci NOT NULL,
-   `tipo` smallint(6) NOT NULL DEFAULT '0',
-  `prioridad` tinytext COLLATE utf8mb4_unicode_ci,
-    `categoria` varchar(200) NOT NULL,
-       `fuenteSol` varchar(200) NOT NULL,
-  `fechaApertura` datetime NOT NULL,
-  `fechaResulucion` datetime DEFAULT NULL,
-    `idDetalleTicket`  int (11) not null,
-   `idTecnicoS`  int (11) not null,
-  PRIMARY KEY (`idTicket`),
-    CONSTRAINT `fk_empleado_detalle` FOREIGN KEY (`idDetalleTicket`) REFERENCES `detalleTicket` (`idDetalleTicket`),
-      CONSTRAINT `fk_empleado_tecnico` FOREIGN KEY (`idTecnicoS`) REFERENCES `tecnico` (`idTecnicoS`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-
-
-
-
-DROP TABLE IF EXISTS `inventario`;
- SET character_set_client = utf8mb4 ;
- CREATE TABLE `inventario` (
-  `idInventario` int NOT NULL AUTO_INCREMENT,
-   `idTicket`  int (11) not null,
-    `idEquipo`  int (11) not null,
-     `idProveedor`  int (11) not null,
-      `idCDP`  int (11) not null,
-  PRIMARY KEY (`idInventario`),
-   CONSTRAINT `fk_empleado_ticket` FOREIGN KEY (`idTicket`) REFERENCES `ticket` (`idTicket`),
-    CONSTRAINT `fk_empleado_equipo` FOREIGN KEY (`idEquipo`) REFERENCES `equipo` (`idEquipo`),
-     CONSTRAINT `fk_empleado_proveedor` FOREIGN KEY (`idProveedor`) REFERENCES `proveedor` (`idProveedor`),
-      CONSTRAINT `fk_empleado_cdp` FOREIGN KEY (`idCDP`) REFERENCES `CDP` (`idCDP`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
 DROP TABLE IF EXISTS `CDP`;
@@ -152,28 +143,42 @@ DROP TABLE IF EXISTS `CDP`;
   PRIMARY KEY (`idCDP`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS `detalleEquipo`;
-SET character_set_client = utf8mb4 ;
-CREATE TABLE `detalleEquipo` (
-  `iddetalleEquipo` int NOT NULL AUTO_INCREMENT,
-  `garantia` varchar(200) NOT NULL,
-  `unidadStock` smallint(6) NOT NULL DEFAULT '0',
-  `descripcion` text COLLATE utf8mb4_unicode_ci,
-  PRIMARY KEY (`idCategoria`)
+
+
+DROP TABLE IF EXISTS `ticket`;
+ SET character_set_client = utf8mb4 ;
+ CREATE TABLE `ticket` (
+  `idTicket` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(75) COLLATE utf8mb4_unicode_ci NOT NULL,
+   `tipo` smallint(6) NOT NULL DEFAULT '0',
+  `prioridad` tinytext COLLATE utf8mb4_unicode_ci,
+    `categoria` varchar(200) NOT NULL,
+       `fuenteSol` varchar(200) NOT NULL,
+  `fechaApertura` datetime NOT NULL,
+  `fechaResulucion` datetime DEFAULT NULL,
+    `idDetalleTicket`  int (11) not null,
+   `idTecnicoS`  int (11) not null,
+  PRIMARY KEY (`idTicket`),
+    CONSTRAINT `fk_empleado_detalle` FOREIGN KEY (`idDetalleTicket`) REFERENCES `detalleTicket` (`idDetalleTicket`),
+      CONSTRAINT `fk_empleado_tecnico` FOREIGN KEY (`idTecnicoS`) REFERENCES `tecnico` (`idTecnicoS`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS `equipo`;
+DROP TABLE IF EXISTS `inventario`;
  SET character_set_client = utf8mb4 ;
- CREATE TABLE `equipo` (
-  `idEquipo` bigint(20) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(200) NOT NULL,
-  `marca` varchar(100) NOT NULL,
-    `modelo` varchar(100) NOT NULL,
-      `tipo` smallint(6) NOT NULL DEFAULT '0',
-  `serie` varchar(50) NOT NULL,
-  `ip` varchar(50) NOT NULL,
-  PRIMARY KEY (`idEquipo`)
+ CREATE TABLE `inventario` (
+  `idInventario` int NOT NULL AUTO_INCREMENT,
+   `idTicket`  int (11) not null,
+    `idEquipo`  int (11) not null,
+     `idProveedor`  int (11) not null,
+      `idCDP`  int (11) not null,
+  PRIMARY KEY (`idInventario`),
+   CONSTRAINT `fk_empleado_ticket` FOREIGN KEY (`idTicket`) REFERENCES `ticket` (`idTicket`),
+    CONSTRAINT `fk_empleado_equipo` FOREIGN KEY (`idEquipo`) REFERENCES `equipo` (`idEquipo`),
+     CONSTRAINT `fk_empleado_proveedor` FOREIGN KEY (`idProveedor`) REFERENCES `proveedor` (`idProveedor`),
+      CONSTRAINT `fk_empleado_cdp` FOREIGN KEY (`idCDP`) REFERENCES `CDP` (`idCDP`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
 
 
 
