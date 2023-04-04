@@ -1,0 +1,83 @@
+package Dao;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import ConectarBD.ConectarBD;
+import Interfaces.IntUsuario;
+import Modelo.Usuario;
+
+public class crudUsuario implements IntUsuario {
+
+	public Usuario ValidarUsuario(Usuario usu){
+		
+		String sql="select * from usuario where userName=? and password=?";
+		PreparedStatement ps=null;	
+		ResultSet rs=null;		
+		Usuario usualm= new Usuario();
+		
+		try {
+			ps=ConectarBD.conexion().prepareStatement(sql);	
+			ps.setString(1,usu.getUsuario());
+			ps.setString(2,usu.getPassword());	
+			rs=ps.executeQuery();	
+			if(rs.next()){
+				usualm.setIdUsuario(rs.getInt(1));
+				usualm.setUsuario(rs.getString(2));
+				usualm.setPassword(rs.getString(3));	
+				usualm.setEmail(rs.getString(4));
+			}  
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		return usualm;
+		
+	}
+
+	@Override
+	public void ActualizarUsuario(Usuario usu) {
+		
+		
+	}
+
+	@Override
+	public Usuario BuscarUsuario(Usuario usu) {
+	
+
+		//Cadena String sql
+		String  sql = "select * from usuario where idUsuario=?";
+		//aplicamos interfaces para la base de datos
+		PreparedStatement ps=null;
+		ResultSet rs=null;
+		//instanciamos la clase usuario
+		Usuario usu = new Usuario();
+		
+		try{
+			ps=ConectarBD.conexion().prepareStatement(sql);
+			ps.setInt(1,cod.getIdUsuario());
+			//ejecutamos
+			rs=ps.executeQuery();
+			//aplicamos una condicion
+			if(rs.next()){
+				usu.setIdUsuario(rs.getInt(1));
+				usu.setUsuario(rs.getString(2));
+				usu.setPassword(rs.getString(3));
+				usu.setEmail(rs.getString(4));
+			}//fin de la condicion
+		}catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();	
+		}//fin del trycatch
+		//retornamos los valores buscados por codigo
+		return usu;
+	}
+
+	@Override
+	public Usuario validarUsuario(Usuario usu) {
+	
+		return null;
+	}
+}

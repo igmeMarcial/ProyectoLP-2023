@@ -44,7 +44,7 @@
 
         <div class="d-flex align-items-center justify-content-center h-custom-2 px-5  mt-5 pt-5 pt-xl-0  ">
 
-          <form action="ControladorUsuario" method="post" style="width: 20rem;">
+          <form action="ControladorPerfil?accion=Ingresar" method="post" style="width: 20rem;">
 
             <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;"></h3>
 

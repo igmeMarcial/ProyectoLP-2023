@@ -42,9 +42,9 @@ INSERT INTO `empleado` ( `nombre`,`apellidos`, `sexo`, `fechaNacimiento`, `telef
 ('Alonzo', 'Barreda', 'M', '2000-05-28', '055545','chanchito15@ngr.com.pe',2),
 ('Joss', 'Paucarpura', 'F', '2000-05-28', '055545','joss@ngr.com.pe',2);
 
-select e.idEmpleado,e.nombre, e.apellidos,e.sexo,e.fechaNacimiento,e.telefono,e.celular,e.email,c.NombreCargo from empleado e inner join cargo c on c.idCargo = e.idCargo order by e.idEmpleado;
+-- select e.idEmpleado,e.nombre, e.apellidos,e.sexo,e.fechaNacimiento,e.telefono,e.celular,e.email,c.NombreCargo from empleado e inner join cargo c on c.idCargo = e.idCargo order by e.idEmpleado;
 
-select c.idCargo, c.NombreCargo, c.estado from cargo c order by c.idCargo;
+-- select c.idCargo, c.NombreCargo, c.estado from cargo c order by c.idCargo;
 
 
 DROP TABLE IF EXISTS `proveedor`;
@@ -74,7 +74,7 @@ VALUES
 ('90123456789', 'Proveedor I', 'Categoría Z', 'Solicitud Tipo 3', 'proveedori@example.com', '9012345678'),
 ('01234567890', 'Proveedor J', 'Categoría X', 'Solicitud Tipo 2', 'proveedorj@example.com', '0123456789');
 
-select p.idProveedor, p.ruc, p.razonSocial, p.categoria, p.tipoSolicitud, p.email, p.telefono from proveedor p;
+-- select p.idProveedor, p.ruc, p.razonSocial, p.categoria, p.tipoSolicitud, p.email, p.telefono from proveedor p;
 
 
 DROP TABLE IF EXISTS `equipo`;
@@ -89,6 +89,17 @@ DROP TABLE IF EXISTS `equipo`;
   `ip` varchar(50) NOT NULL,
   PRIMARY KEY (`idEquipo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO equipo (nombre, marca, modelo, tipo, serie, ip) VALUES ('Computadora 1', 'Lenovo', 'ThinkPad T14', 1, '123456', '192.168.0.1');
+INSERT INTO equipo (nombre, marca, modelo, tipo, serie, ip) VALUES ('Impresora 1', 'HP', 'LaserJet Pro M404dw', 2, '789012', '192.168.0.2');
+INSERT INTO equipo (nombre, marca, modelo, tipo, serie, ip) VALUES ('Servidor 1', 'Dell', 'PowerEdge R640', 3, '345678', '192.168.0.3');
+INSERT INTO equipo (nombre, marca, modelo, tipo, serie, ip) VALUES ('Rúter 1', 'Cisco', 'ISR 1100 4-Port', 4, '901234', '192.168.0.4');
+INSERT INTO equipo (nombre, marca, modelo, tipo, serie, ip) VALUES ('Switch 1', 'Netgear', 'GS324TP', 5, '567890', '192.168.0.5');
+INSERT INTO equipo (nombre, marca, modelo, tipo, serie, ip) VALUES ('Cámara de seguridad 1', 'Hikvision', 'DS-2CD2143G0-IS', 6, '234567', '192.168.0.6');
+INSERT INTO equipo (nombre, marca, modelo, tipo, serie, ip) VALUES ('Teléfono 1', 'Avaya', 'J139', 7, '890123', '192.168.0.7');
+INSERT INTO equipo (nombre, marca, modelo, tipo, serie, ip) VALUES ('Proyector 1', 'Epson', 'PowerLite 1780W', 8, '456789', '192.168.0.8');
+INSERT INTO equipo (nombre, marca, modelo, tipo, serie, ip) VALUES ('Escáner 1', 'Brother', 'ADS-1700W', 9, '012345', '192.168.0.9');
+INSERT INTO equipo (nombre, marca, modelo, tipo, serie, ip) VALUES ('Monitor 1', 'LG', '27UK650-W', 10, '678901', '192.168.0.10');
 
 
 DROP TABLE IF EXISTS `detalleEquipo`;

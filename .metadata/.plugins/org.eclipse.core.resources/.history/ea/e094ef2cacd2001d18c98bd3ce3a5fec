@@ -1,0 +1,13 @@
+package Interfaces;
+
+
+import java.util.List;
+
+import Modelo.Usuario;
+
+public interface IntUsuario {
+	public void ActualizarUsuario(Usuario usu);
+	public Usuario BuscarUsuario(Usuario usu);
+	public Usuario validarUsuario(Usuario usu);
+	public List<Usuario> ListarUsuarios();
+}

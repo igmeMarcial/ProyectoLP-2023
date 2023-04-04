@@ -121,7 +121,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorPerfil?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>My Perfil</span>
 								</a>
@@ -131,7 +131,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorPerfil?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>Configuración</span>
 								</a>
@@ -141,7 +141,7 @@
 							</li>
 
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="ControladorCrud?accion=perfil">
+								<a class="dropdown-item d-flex align-items-center" href="ControladorPerfil?accion=perfil">
 									<i class="ri-settings-2-line"></i>
 									<span>Ayuda?</span>
 								</a>
@@ -256,7 +256,7 @@
 				<li class="nav-heading">Configuraciones</li>
 
 				<li class="nav-item">
-					<a class="nav-link collapsed" href="ControladorCrud?accion=perfil">
+					<a class="nav-link collapsed" href="ControladorPerfil?accion=perfil">
 						<i class="ri-file-chart-line"></i>
 						<span>Perfil</span>
 					</a>
