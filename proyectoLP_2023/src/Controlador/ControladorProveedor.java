@@ -73,7 +73,7 @@ public class ControladorProveedor extends HttpServlet {
 	private void eliminarProveedor(HttpServletRequest request, HttpServletResponse response) {
 		Proveedor pro = new Proveedor();
 		CrudProveedor crud= new CrudProveedor();
-		String id = request.getParameter("idProveedor");
+		String id = request.getParameter("cod");
 		if(id != null){
 			pro.setIdProveedor(Integer.parseInt(id));
 			try {
@@ -140,7 +140,7 @@ public class ControladorProveedor extends HttpServlet {
 			try {
 				pro = crud.BuscarProveedor(pro);
 				if(pro != null){
-					request.setAttribute("getEmpleado",pro);
+					request.setAttribute("getProveedor",pro);
 					
 				}else{
 					 request.setAttribute("mensaje","No se pudo buscar Empleado");

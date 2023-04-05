@@ -320,7 +320,7 @@
 										<small class="text-muted float-end">Default</small>
 									</div>
 									<div class="card-body">
-										<form action="ControladorCrud?accion=nuevoEmpleado" method="post">
+										<form action="ControladorProveedor?accion=nuevoProveedor" method="post">
 											<div class="mb-3">
 												<label class="form-label" for="nombreNuevo">RUC</label>
 												<div class="input-group input-group-merge">
@@ -330,7 +330,7 @@
 														type="text"
 														class="form-control inputCustom borderColorInput"
 														id="nombreNuevo"
-														placeholder="Marcial"
+														placeholder="ruc"
 														aria-label="Marcial"
 														aria-describedby="basic-icon-default-fullname"
 														required
@@ -346,24 +346,24 @@
 														type="text"
 														class="form-control inputCustom borderColorInput"
 														id="apellidosNuevo"
-														placeholder="Apellidos"
-														aria-label="apellido"
+														placeholder="Razón Social"
+														aria-label="default"
 														aria-describedby="basic-icon-default-fullname2"
 														required
 													/>
 												</div>
 											</div>
 											<div class="mb-3">
-												<label class="form-label" for="getFechaCompleted">Categoria</label>
+												<label class="form-label" for="categoria">Categoria</label>
 												<div class="input-group input-group-merge">
 													<span id="basic-icon-default-company2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
 													<input
 														name="categoriaProveedor"
 														type="text"
-														id="getFechaCompleted"
+														id="categoria"
 														class="form-control inputCustom borderColorInput"
-														placeholder="Fecha"
-														aria-label="0000-00-00"
+														placeholder="Categoria"
+														aria-label="default"
 														aria-describedby="basic-icon-default-fechaNac"
 														required
 													/>
@@ -378,8 +378,8 @@
 														type="text"
 														id="basic-icon-default-company"
 														class="form-control inputCustom borderColorInput"
-														placeholder="Sexo"
-														aria-label="ACME Inc."
+														placeholder="Tipo solicitud"
+														aria-label="default"
 														aria-describedby="basic-icon-default-company2"
 														required
 													/>

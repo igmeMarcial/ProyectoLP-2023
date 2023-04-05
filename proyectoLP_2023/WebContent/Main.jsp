@@ -202,7 +202,7 @@
 							<a href="ControladorInventario?accion=registrarIventario"> <i class="bi bi-circle"></i><span>Agregar Inventario Nuevo</span> </a>
 						</li>
 						<li>
-							<a href="ControladorInventario?accion=registrarInventario"> <i class="bi bi-circle"></i><span>Listar Inventarios</span> </a>
+							<a href="ControladorInventario?accion=listarInventarios"> <i class="bi bi-circle"></i><span>Listar Inventarios</span> </a>
 						</li>
 					</ul>
 				</li>
@@ -215,7 +215,7 @@
 							<a href="ControladorEquipo?accion=registrarEquipo"> <i class="bi bi-circle"></i><span>Agregar nuevo Equipo</span> </a>
 						</li>
 						<li>
-							<a href="ControladorEquipo?accion=registrarEquipo"> <i class="bi bi-circle"></i><span>Listar Equipos</span> </a>
+							<a href="ControladorEquipo?accion=listarEquipos"> <i class="bi bi-circle"></i><span>Listar Equipos</span> </a>
 						</li>
 					</ul>
 				</li>

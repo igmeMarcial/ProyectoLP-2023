@@ -41,26 +41,31 @@ public class TestCrudEquipo {
 		crud.EliminarEquipo(equ);
 		*/
 		
-		/*
+		
 		List<Equipo> listado=crud.ListarEquipos();	
 				for(Equipo list:listado){	
+					
+					/*
 					System.out.println("ID "+list.getIdEquipo()+" Nombre "+list.getNombre()+
 							" Marca "+list.getMarca()+" Modelo "+list.getModelo()+" tipo "
-							+list.getTipo()+" serie "+list.getSerie()+" IP "+list.getIP());
+							+list.getTipo()+" serie "+list.getSerie()+" IP "+list.getIP());*/
+					System.out.println(list.getNombre());
 				}  	
-		*/
+		
 		
 		
 		/*
 		System.out.println("Buscar equipo por ID");
 		equ.setIdEquipo(3);
 		Equipo codequi=crud.BuscarEquipo(equ);
+		*/
 		
+		
+		/*
 		System.out.println("ID "+codequi.getIdEquipo()+" Nombre "+codequi.getNombre()+
 				" Marca "+codequi.getMarca()+" Modelo "+codequi.getModelo()+" tipo "
-				+codequi.getTipo()+" serie "+codequi.getSerie()+" IP "+codequi.getIP());
+				+codequi.getTipo()+" serie "+codequi.getSerie()+" IP "+codequi.getIP());*/
 		
-		*/
 		
 	}
 

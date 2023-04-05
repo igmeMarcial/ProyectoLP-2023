@@ -137,7 +137,7 @@ CREATE TABLE `detalleEquipo` (
 DROP TABLE IF EXISTS `detalleAtencion`;
 SET character_set_client = utf8mb4 ;
 CREATE TABLE `detalleAtencion` (
-  `iddetalleAtencion` int NOT NULL AUTO_INCREMENT,
+  `idDetalleAtencion` int NOT NULL AUTO_INCREMENT,
   `estado` varchar(200) NOT NULL,
   `descripcion` text COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`iddetalleAtencion`)
@@ -180,11 +180,9 @@ DROP TABLE IF EXISTS `ticket`;
        `fuenteSol` varchar(200) NOT NULL,
   `fechaApertura` datetime NOT NULL,
   `fechaResulucion` datetime DEFAULT NULL,
-    `idDetalleTicket`  int (11) not null,
-   `idTecnicoS`  int (11) not null,
+    `idDetalleAtencion`  int (11) not null,
   PRIMARY KEY (`idTicket`),
-    CONSTRAINT `fk_empleado_detalle` FOREIGN KEY (`idDetalleTicket`) REFERENCES `detalleTicket` (`idDetalleTicket`),
-      CONSTRAINT `fk_empleado_tecnico` FOREIGN KEY (`idTecnicoS`) REFERENCES `tecnico` (`idTecnicoS`)
+    CONSTRAINT `fk_empleado_detalle` FOREIGN KEY (`idDetalleAtencion`) REFERENCES `detalleAtencion` (`idDetalleAtencion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 DROP TABLE IF EXISTS `inventario`;
@@ -206,4 +204,4 @@ DROP TABLE IF EXISTS `inventario`;
 
 
 
--- FALTAN TABLA ENTRDAS Y SALIDAS TAMBIEN UNA TABLA TECNICO S
+-- FALTAN TABLA ENTRDAS Y SALIDAS TAMBIEN UNA TABLA (TECNICO S)

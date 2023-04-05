@@ -350,242 +350,24 @@
 											<i class="ri-more-2-fill"></i>
 										</button>
 										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Editar</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i>Eliminar</a>
+												<a class="dropdown-item" href="
+																<c:url value="ControladorProveedor">
+															      <c:param name="accion" value="leerProveedor" />
+															 <c:param name="codPro" value="${proveedor.idProveedor}" />
+															     </c:url>"><i class="ri-edit-line"></i> Editar
+															                                                   
+												</a>
+											<input type="hidden" id="codigo"  value="${proveedor.idProveedor}">
+															<a id="deleteData" class="dropdown-item" href="<c:url value="ControladorProveedor">
+															<c:param name="accion" value="eliminarProveedor"/> 
+															<c:param  name="cod" value="${proveedor.idProveedor}"/>
+											</c:url>"><i class="ri-delete-bin-line"></i> Eliminar</a>
 										</div>
 									</div>
 								</td>
 							</tr>
 							</c:forEach> 
-							<tr role="row" class="even">
-								<td class="sorting_1">Angelica Ramos</td>
-								<td>Chief Executive Officer (CEO)</td>
-								<td>London</td>
-								<td>47</td>
-								<td>2009/10/09</td>
-								<td>$1,200,000</td>
-								<td class="text-secondary text-xs font-weight-bold align-middle text-center">
-									<div class="dropdown">
-										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-											<i class="ri-more-2-fill"></i>
-										</button>
-										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Editar</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i>Eliminar</a>
-										</div>
-									</div>
-								</td>
-								
-							</tr>
-							<tr role="row" class="odd">
-								<td class="sorting_1">Ashton Cox</td>
-								<td>Junior Technical Author</td>
-								<td>San Francisco</td>
-								<td>66</td>
-								<td>2009/01/12</td>
-								<td>$86,000</td>
-								<td class="text-secondary text-xs font-weight-bold align-middle text-center">
-									<div class="dropdown">
-										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-											<i class="ri-more-2-fill"></i>
-										</button>
-										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr role="row" class="even">
-								<td class="sorting_1">Bradley Greer</td>
-								<td>Software Engineer</td>
-								<td>London</td>
-								<td>41</td>
-								<td>2012/10/13</td>
-								<td>$132,000</td>
-								<td class="text-secondary text-xs font-weight-bold align-middle text-center">
-									<div class="dropdown">
-										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-											<i class="ri-more-2-fill"></i>
-										</button>
-										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr role="row" class="odd">
-								<td class="sorting_1">Brenden Wagner</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>28</td>
-								<td>2011/06/07</td>
-								<td>$206,850</td>
-								<td class="text-secondary text-xs font-weight-bold align-middle text-center">
-									<div class="dropdown">
-										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-											<i class="ri-more-2-fill"></i>
-										</button>
-										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr role="row" class="even">
-								<td class="sorting_1">Brielle Williamson</td>
-								<td>Integration Specialist</td>
-								<td>New York</td>
-								<td>61</td>
-								<td>2012/12/02</td>
-								<td>$372,000</td>
-								<td class="text-secondary text-xs font-weight-bold align-middle text-center">
-									<div class="dropdown">
-										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-											<i class="ri-more-2-fill"></i>
-										</button>
-										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr role="row" class="odd">
-								<td class="sorting_1">Bruno Nash</td>
-								<td>Software Engineer</td>
-								<td>London</td>
-								<td>38</td>
-								<td>2011/05/03</td>
-								<td>$163,500</td>
-								<td class="text-secondary text-xs font-weight-bold align-middle text-center">
-									<div class="dropdown">
-										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-											<i class="ri-more-2-fill"></i>
-										</button>
-										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr role="row" class="even">
-								<td class="sorting_1">Caesar Vance</td>
-								<td>Pre-Sales Support</td>
-								<td>New York</td>
-								<td>21</td>
-								<td>2011/12/12</td>
-								<td>$106,450</td>
-								<td class="text-secondary text-xs font-weight-bold align-middle text-center">
-									<div class="dropdown">
-										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-											<i class="ri-more-2-fill"></i>
-										</button>
-										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr role="row" class="odd">
-								<td class="sorting_1">Cara Stevens</td>
-								<td>Sales Assistant</td>
-								<td>New York</td>
-								<td>46</td>
-								<td>2011/12/06</td>
-								<td>$145,600</td>
-								<td class="text-secondary text-xs font-weight-bold align-middle text-center">
-									<div class="dropdown">
-										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-											<i class="ri-more-2-fill"></i>
-										</button>
-										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr role="row" class="even">
-								<td class="sorting_1">Cedric Kelly</td>
-								<td>Senior Javascript Developer</td>
-								<td>Edinburgh</td>
-								<td>22</td>
-								<td>2012/03/29</td>
-								<td>$433,060</td>
-								<td class="text-secondary text-xs font-weight-bold align-middle text-center">
-									<div class="dropdown">
-										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-											<i class="ri-more-2-fill"></i>
-										</button>
-										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr role="row" class="odd">
-								<td class="sorting_1">Cedric Kelly</td>
-								<td>Senior Javascript Developer</td>
-								<td>Edinburgh</td>
-								<td>22</td>
-								<td>2012/03/29</td>
-								<td>$433,060</td>
-								<td class="text-secondary text-xs font-weight-bold align-middle text-center">
-									<div class="dropdown">
-										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-											<i class="ri-more-2-fill"></i>
-										</button>
-										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr role="row" class="even">
-								<td class="sorting_1">Cedric Kelly</td>
-								<td>Senior Javascript Developer</td>
-								<td>Edinburgh</td>
-								<td>22</td>
-								<td>2012/03/29</td>
-								<td>$433,060</td>
-								<td class="text-secondary text-xs font-weight-bold align-middle text-center">
-									<div class="dropdown">
-										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-											<i class="ri-more-2-fill"></i>
-										</button>
-										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr role="row" class="odd">
-								<td class="sorting_1">Cedric Kelly</td>
-								<td>Senior Javascript Developer</td>
-								<td>Edinburgh</td>
-								<td>22</td>
-								<td>2012/03/29</td>
-								<td>$433,060</td>
-								<td class="text-secondary text-xs font-weight-bold align-middle text-center">
-									<div class="dropdown">
-										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-											<i class="ri-more-2-fill"></i>
-										</button>
-										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
+							
 							<tr role="row" class="even">
 								<td class="sorting_1">Marcial</td>
 								<td>Senior Javascript Developer</td>
@@ -608,12 +390,12 @@
 						</tbody>
 						<tfoot>
 							<tr>
-								<th rowspan="1" colspan="1" class="th-footer">Name</th>
-								<th rowspan="1" colspan="1" class="th-footer">Position</th>
-								<th rowspan="1" colspan="1" class="th-footer">Office</th>
-								<th rowspan="1" colspan="1" class="th-footer">Age</th>
-								<th rowspan="1" colspan="1" class="th-footer">Start date</th>
-								<th rowspan="1" colspan="1" class="th-footer">Salary</th>
+								<th rowspan="1" colspan="1" class="th-footer">RUC</th>
+								<th rowspan="1" colspan="1" class="th-footer">R.S</th>
+								<th rowspan="1" colspan="1" class="th-footer">Categoria</th>
+								<th rowspan="1" colspan="1" class="th-footer">Telefono</th>
+								<th rowspan="1" colspan="1" class="th-footer">Email</th>
+								<th rowspan="1" colspan="1" class="th-footer">T.S</th>
 								<th rowspan="1" colspan="1" class="th-footer">Filtrar</th>
 							</tr>
 						</tfoot>
@@ -713,6 +495,50 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 		<script src="./script/main.js" type="text/javascript"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+		
+		<script>
+
+		$(document).ready(function(){
+			
+			
+			$("tr #deleteData").click(function (e){
+				e.preventDefault();
+				var cod = $(this).parent().find("#codigo").val();	
+				Swal.fire({
+					  title: '¿Estás seguro?',
+					  text: "¡No podrás deshacer esto!",
+					  icon: 'warning',
+					  showCancelButton: true,
+					  confirmButtonColor: '#3085d6',
+					  cancelButtonColor: '#d33',
+					  confirmButtonText: 'Si, Eliminar!'
+					}).then(function(result) {
+					  if (result.isConfirmed) {
+						  eliminar(cod);
+					    Swal.fire(
+					      '¡Borrado!',
+					      'El archivo ha sido borrado.',
+					      'success'
+					    )
+					    setTimeout(function(){
+					    	parent.location.href = "ControladorProveedor?accion=listarProveedores"
+					    },1800);
+					  }
+					})									
+			})
+			function eliminar (cod){		
+				var url = "ControladorProveedor?accion=eliminarProveedor&cod=" + cod;			
+				$.ajax({
+					type: 'POST',
+					url: url,
+					async: true,
+					success: function(r){				
+					}
+				});
+			}
+			
+		})
+		</script>
 	</body>
 </html>
     

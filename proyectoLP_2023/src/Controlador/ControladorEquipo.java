@@ -210,9 +210,10 @@ public class ControladorEquipo extends HttpServlet {
 		String url="/ListadoEquipos.jsp";	
 		Equipo equ = new Equipo();
 		CrudEquipo crud= new CrudEquipo();	
-		List<Equipo> listado=crud.ListarEquipos();
+		List<Equipo> listadoE=crud.ListarEquipos();
 		try {
-			 request.setAttribute("listadoEquipos",listado);
+			 request.setAttribute("listadoEquipos",listadoE);	
+			
 		} catch (Exception e) {
 			 request.setAttribute("mensaje","No se puede listar" + e.getMessage());
 			 System.out.println("No se puede listar: " + e.getMessage());
