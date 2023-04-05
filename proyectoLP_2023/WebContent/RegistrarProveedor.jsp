@@ -326,7 +326,7 @@
 												<div class="input-group input-group-merge">
 													<span id="basic-icon-default-fullname2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
 													<input
-														name="nombreNuevo"
+														name="rucProveedor"
 														type="text"
 														class="form-control inputCustom borderColorInput"
 														id="nombreNuevo"
@@ -342,7 +342,7 @@
 												<div class="input-group input-group-merge">
 													<span id="basic-icon-default-fullname22" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
 													<input
-														name="apellidosNuevo"
+														name="rsProveedor"
 														type="text"
 														class="form-control inputCustom borderColorInput"
 														id="apellidosNuevo"
@@ -358,7 +358,7 @@
 												<div class="input-group input-group-merge">
 													<span id="basic-icon-default-company2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
 													<input
-														name="fechaNacimiento"
+														name="categoriaProveedor"
 														type="text"
 														id="getFechaCompleted"
 														class="form-control inputCustom borderColorInput"
@@ -374,6 +374,7 @@
 												<div class="input-group input-group-merge">
 													<span id="basic-icon-default-company23" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
 													<input
+														name="tipoProveedor"
 														type="text"
 														id="basic-icon-default-company"
 														class="form-control inputCustom borderColorInput"
@@ -389,7 +390,7 @@
 												<div class="input-group input-group-merge">
 													<span class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
 													<input
-														name="emailNuevo"
+														name="emailProveedor"
 														type="text"
 														id="emailNuevo"
 														class="form-control inputCustom borderColorInput"
@@ -407,7 +408,7 @@
 												<div class="input-group input-group-merge">
 													<span id="celularNuevo" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
 													<input
-														name="celularNuevo"
+														name="celularProveedor"
 														type="text"
 														id="basic-icon-default-phone"
 														class="form-control phone-mask inputCustom borderColorInput"

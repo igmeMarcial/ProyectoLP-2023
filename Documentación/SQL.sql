@@ -101,6 +101,23 @@ INSERT INTO equipo (nombre, marca, modelo, tipo, serie, ip) VALUES ('Proyector 1
 INSERT INTO equipo (nombre, marca, modelo, tipo, serie, ip) VALUES ('Escáner 1', 'Brother', 'ADS-1700W', 9, '012345', '192.168.0.9');
 INSERT INTO equipo (nombre, marca, modelo, tipo, serie, ip) VALUES ('Monitor 1', 'LG', '27UK650-W', 10, '678901', '192.168.0.10');
 
+DROP TABLE IF EXISTS `categoria`;
+SET character_set_client = utf8mb4 ;
+CREATE TABLE `categoria` (
+  `idCategoria` int NOT NULL AUTO_INCREMENT,
+  `nombreCategoria` varchar(200) NOT NULL,
+  `descripcion` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`idCategoria`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `categoria` (`nombreCategoria`, `descripcion`) VALUES
+( 'CATEGORIA A', 'SUELDO DE S/1500'),
+( 'CATEGORIA B', 'SUELDO DE S/2000'),
+( 'CATEGORIA C', 'SUELDO DE S/2800'),
+( 'CATEGORIA D', 'SUELDO DE S/3200');
+
+
+-- _____________________________________________successs_________________________________________
 
 DROP TABLE IF EXISTS `detalleEquipo`;
 SET character_set_client = utf8mb4 ;
@@ -115,14 +132,7 @@ CREATE TABLE `detalleEquipo` (
 
 -- exec correct
 
-DROP TABLE IF EXISTS `categoria`;
-SET character_set_client = utf8mb4 ;
-CREATE TABLE `categoria` (
-  `idCategoria` int NOT NULL AUTO_INCREMENT,
-  `nombreCategoria` varchar(200) NOT NULL,
-  `descripcion` text COLLATE utf8mb4_unicode_ci,
-  PRIMARY KEY (`idCategoria`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 DROP TABLE IF EXISTS `detalleAtencion`;
 SET character_set_client = utf8mb4 ;
@@ -132,6 +142,9 @@ CREATE TABLE `detalleAtencion` (
   `descripcion` text COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`iddetalleAtencion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
 
 
 

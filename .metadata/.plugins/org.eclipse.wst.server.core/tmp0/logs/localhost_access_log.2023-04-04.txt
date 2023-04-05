@@ -215,3 +215,11 @@
 0:0:0:0:0:0:0:1 - - [04/Apr/2023:14:00:47 -0500] "GET /proyectoLP_2023/ControladorCategoria?accion=registrarCategoria HTTP/1.1" 404 1074
 0:0:0:0:0:0:0:1 - - [04/Apr/2023:14:00:54 -0500] "GET /proyectoLP_2023/ControladorProveedor?accion=registrarProveedor HTTP/1.1" 200 21060
 0:0:0:0:0:0:0:1 - - [04/Apr/2023:14:00:54 -0500] "GET /resources/demos/style.css HTTP/1.1" 404 1052
+127.0.0.1 - - [04/Apr/2023:19:07:18 -0500] "GET / HTTP/1.1" 404 1002
+0:0:0:0:0:0:0:1 - - [04/Apr/2023:19:07:19 -0500] "GET /proyectoLP_2023/ HTTP/1.1" 200 3105
+0:0:0:0:0:0:0:1 - - [04/Apr/2023:19:07:26 -0500] "GET /proyectoLP_2023/ HTTP/1.1" 200 3105
+0:0:0:0:0:0:0:1 - - [04/Apr/2023:19:07:27 -0500] "GET /proyectoLP_2023/favicon.ico HTTP/1.1" 404 1056
+0:0:0:0:0:0:0:1 - - [04/Apr/2023:19:07:35 -0500] "POST /proyectoLP_2023/ControladorPerfil?accion=Ingresar HTTP/1.1" 200 19869
+0:0:0:0:0:0:0:1 - - [04/Apr/2023:19:07:36 -0500] "GET /favicon.ico HTTP/1.1" 404 1024
+0:0:0:0:0:0:0:1 - - [04/Apr/2023:19:07:50 -0500] "GET /proyectoLP_2023/img/videongr.mp4 HTTP/1.1" 206 32184487
+0:0:0:0:0:0:0:1 - - [04/Apr/2023:19:10:47 -0500] "GET /proyectoLP_2023/ControladorPerfil?accion=perfil HTTP/1.1" 200 25074

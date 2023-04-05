@@ -179,7 +179,7 @@ public class ControladorCrud extends HttpServlet {
 			try {
 				em = crud.BuscarEmpleado(em);
 				if(em != null){
-					request.setAttribute("getEmpleado",em);
+					request.setAttribute("getProveedor",em);
 					
 				}else{
 					 request.setAttribute("mensaje","No se pudo buscar Empleado");

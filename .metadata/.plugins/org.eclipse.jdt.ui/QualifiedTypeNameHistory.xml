@@ -17,15 +17,16 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="Modelo.Empleado"/>
 <fullyQualifiedTypeName name="Dao.CrudEmpleado"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.text.DateFormat"/>
 <fullyQualifiedTypeName name="Interfaces.IntProveedor"/>
 <fullyQualifiedTypeName name="Modelo.Proveedor"/>
 <fullyQualifiedTypeName name="Dao.CrudProveedor"/>
 <fullyQualifiedTypeName name="Interfaces.IntUsuario"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="Dao.crudUsuario"/>
 <fullyQualifiedTypeName name="Modelo.Usuario"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="Modelo.Categoria"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>

@@ -51,6 +51,9 @@ public class ControladorProveedor extends HttpServlet {
 				case "actualizarProveedor":
 					actualizarProveedor(request,response);
 					break;
+				case "eliminarProveedor":
+					eliminarProveedor(request,response);
+					break;
 				default:
 					response.sendRedirect("Main.jsp");
 				}
@@ -67,17 +70,126 @@ public class ControladorProveedor extends HttpServlet {
 		}
 	}
 
+	private void eliminarProveedor(HttpServletRequest request, HttpServletResponse response) {
+		Proveedor pro = new Proveedor();
+		CrudProveedor crud= new CrudProveedor();
+		String id = request.getParameter("idProveedor");
+		if(id != null){
+			pro.setIdProveedor(Integer.parseInt(id));
+			try {
+				crud.EliminarProveedor(pro);
+				response.sendRedirect("ControladorProveedor?accion=listarProveedores");										
+				request.setAttribute("success","Eliminado correctamente");
+				
+			} catch (Exception e) {
+				request.setAttribute("mensaje","No se pudo eliminar Alert" + e.getMessage());
+			}
+		}else{
+			 request.setAttribute("mensaje","El id no se puede eliminar");
+		}
+		
+	}
+
 	private void actualizarProveedor(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
+		String url="/ActualizarProveedores.jsp";
+		Proveedor pro = new Proveedor();
+		CrudProveedor crud= new CrudProveedor();
+		String id = request.getParameter("idProveedor");
+		String ruc = request.getParameter("rucProveedor");
+		String rs = request.getParameter("rsProveedor");
+		String categoria = request.getParameter("categoriaProveedor");
+		String t = request.getParameter("tipoProveedor");
+		String email = 	request.getParameter("emailProveedor");
+		String celu = request.getParameter("celularProveedor");
+		if(id != null){
+			pro.setIdProveedor(Integer.parseInt(id));
+			pro.setRuc(ruc);
+			pro.setRazonSocial(rs);
+			pro.setCategoria(categoria);
+			pro.setTipoSolitud(t);	
+			pro.setEmail(email);
+			pro.setTelefono(celu);
+			try {
+				crud.ActualizarProveedor(pro);
+				response.sendRedirect("ControladorProveedor?accion=listarProveedores");	
+			} catch (Exception e) {
+				request.setAttribute("mensaje","No se pudo Actualizar " + e.getMessage());
+				System.out.println("No se realizó la actualización: " + e.getMessage());
+				 request.setAttribute("empleado",pro);
+			}
+			try {			
+				this.getServletConfig().getServletContext().getRequestDispatcher(url).forward(request, response);
+			} catch (Exception e) {
+				request.setAttribute("mensaje","No se pudo realizar petición " + e.getMessage());
+				System.out.println("No se realizó peticion: " + e.getMessage());
+			}
+		
+		}else{
+			System.out.println("No tiene  ID ");
+		}
 		
 	}
 
 	private void leerProveedor(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
+		String url="/ActualizarProveedores.jsp";
+		Proveedor pro = new Proveedor();
+		CrudProveedor crud= new CrudProveedor();	
+		String idPro = request.getParameter("codPro");
+		if(idPro !=null){
+			pro.setIdProveedor(Integer.parseInt(idPro));
+			try {
+				pro = crud.BuscarProveedor(pro);
+				if(pro != null){
+					request.setAttribute("getEmpleado",pro);
+					
+				}else{
+					 request.setAttribute("mensaje","No se pudo buscar Empleado");
+				}
+			} catch (Exception e) {
+				request.setAttribute("mensaje","No se pudo buscar Empleado Alert" + e.getMessage());
+			}
+		}else{
+			request.setAttribute("mensaje","Se necesita  Id");
+		}
+		try {
+			
+			this.getServletConfig().getServletContext().getRequestDispatcher(url).forward(request, response);
+		} catch (Exception e) {
+			request.setAttribute("mensaje","No se pudo realizar petición " + e.getMessage());
+			System.out.println("No se realizó peticion: " + e.getMessage());
+		}
 		
 	}
 
 	private void registrarNuevoProveedor(HttpServletRequest request, HttpServletResponse response) {
+		Proveedor pro = new Proveedor();
+		CrudProveedor crud= new CrudProveedor();	
+		String ruc = request.getParameter("rucProveedor");
+		String rs = request.getParameter("rsProveedor");
+		String categoria = request.getParameter("categoriaProveedor");
+		String t = request.getParameter("tipoProveedor");
+		String email = 	request.getParameter("emailProveedor");
+		String celu = request.getParameter("celularProveedor");
+		
+		if(ruc !=null ){
+			//pro.setIdProveedor(11);
+			pro.setRuc(ruc);
+			pro.setRazonSocial(rs);
+			pro.setCategoria(categoria);
+			pro.setTipoSolitud(t);	
+			pro.setEmail(email);
+			pro.setTelefono(celu);
+			
+			try {
+				crud.RegistrarProveedor(pro);
+				response.sendRedirect("ControladorProveedor?accion=listarProveedores");				
+			} catch (Exception e) {
+				request.setAttribute("mensaje","No se pudo registrar " + e.getMessage());
+				System.out.println("No se realizó el registro: " + e.getMessage());
+				 request.setAttribute("empleado",pro);
+				 this.registrarProveedor(request,response);
+			}
+		}
 		
 	}
 
