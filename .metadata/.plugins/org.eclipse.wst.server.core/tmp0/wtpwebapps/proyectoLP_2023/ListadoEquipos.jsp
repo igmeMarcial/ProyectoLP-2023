@@ -338,12 +338,12 @@
 						<tbody>
 						<c:forEach var="equipo" items="${listadoEquipos}">
 							<tr role="row" class="odd">
-								<td class="sorting_1 text-secondary text-dark font-weight-bold "><c:out value="${equipo.Nombre}"></c:out></td>
-								<td class="text-secondary text-dark  font-weight-bold"><c:out value="${equipo.Marca}"></c:out></td>
-								<td class="text-secondary text-dark  font-weight-bold"><c:out value="${equipo.Modelo}"></c:out></td>
-								<td class="text-secondary text-dark font-weight-bold"><c:out value="${equipo.Serie}"></c:out></td>
+								<td class="sorting_1 text-secondary text-dark font-weight-bold "><c:out value="${equipo.nombre}"></c:out></td>
+								<td class="text-secondary text-dark  font-weight-bold"><c:out value="${equipo.marca}"></c:out></td>
+								<td class="text-secondary text-dark  font-weight-bold"><c:out value="${equipo.modelo}"></c:out></td>
+								<td class="text-secondary text-dark font-weight-bold"><c:out value="${equipo.serie}"></c:out></td>
 								<td class="text-secondary text-dark font-weight-bold"><c:out value="${equipo.IP}"></c:out></td>
-								<td class="text-secondary text-dark font-weight-bold"><c:out value="${equipo.Tipo}"></c:out></td>
+								<td class="text-secondary text-dark font-weight-bold"><c:out value="${equipo.tipo}"></c:out></td>
 								<td class="text-secondary text-dark font-weight-bold align-middle text-center">
 									<div class="dropdown">
 										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
@@ -353,49 +353,29 @@
 												<a class="dropdown-item" href="
 																<c:url value="ControladorEquipo">
 															      <c:param name="accion" value="leerEquipo" />
-															 <c:param name="codPro" value="${equipo.IdEquipo}" />
+															 <c:param name="codE" value="${equipo.idEquipo}" />
 															     </c:url>"><i class="ri-edit-line"></i> Editar
 															                                                   
 												</a>
-											<input type="hidden" id="codigo"  value="${equipo.IdEquipo}">
+											<input type="hidden" id="codigo"  value="${equipo.idEquipo}">
 															<a id="deleteData" class="dropdown-item" href="<c:url value="ControladorEquipo">
 															<c:param name="accion" value="eliminarEquipo"/> 
-															<c:param  name="cod" value="${equipo.IdEquipo}"/>
+															<c:param  name="cod" value="${equipo.idEquipo}"/>
 											</c:url>"><i class="ri-delete-bin-line"></i> Eliminar</a>
 										</div>
 									</div>
 								</td>
 							</tr>
 							</c:forEach> 
-							
-							<tr role="row" class="even">
-								<td class="sorting_1">Marcial</td>
-								<td>Senior Javascript Developer</td>
-								<td>Igme</td>
-								<td>21</td>
-								<td>2012/03/29</td>
-								<td>$433,060</td>
-								<td class="text-secondary text-xs font-weight-bold align-middle text-center">
-									<div class="dropdown">
-										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-											<i class="ri-more-2-fill"></i>
-										</button>
-										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
 						</tbody>
 						<tfoot>
 							<tr>
-								<th rowspan="1" colspan="1" class="th-footer">RUC</th>
-								<th rowspan="1" colspan="1" class="th-footer">R.S</th>
-								<th rowspan="1" colspan="1" class="th-footer">Categoria</th>
-								<th rowspan="1" colspan="1" class="th-footer">Telefono</th>
-								<th rowspan="1" colspan="1" class="th-footer">Email</th>
-								<th rowspan="1" colspan="1" class="th-footer">T.S</th>
+								<th rowspan="1" colspan="1" class="th-footer">Nombre</th>
+								<th rowspan="1" colspan="1" class="th-footer">Marca</th>
+								<th rowspan="1" colspan="1" class="th-footer">Modelo</th>
+								<th rowspan="1" colspan="1" class="th-footer">serie</th>
+								<th rowspan="1" colspan="1" class="th-footer">ipl</th>
+								<th rowspan="1" colspan="1" class="th-footer">Tipo</th>
 								<th rowspan="1" colspan="1" class="th-footer">Filtrar</th>
 							</tr>
 						</tfoot>
@@ -521,13 +501,13 @@
 					      'success'
 					    )
 					    setTimeout(function(){
-					    	parent.location.href = "ControladorProveedor?accion=listarProveedores"
+					    	parent.location.href = "ControladorEquipo?accion=listarEquipos"
 					    },1800);
 					  }
 					})									
 			})
 			function eliminar (cod){		
-				var url = "ControladorProveedor?accion=eliminarProveedor&cod=" + cod;			
+				var url = "ControladorEquipo?accion=eliminarEquipo&cod=" + cod;			
 				$.ajax({
 					type: 'POST',
 					url: url,

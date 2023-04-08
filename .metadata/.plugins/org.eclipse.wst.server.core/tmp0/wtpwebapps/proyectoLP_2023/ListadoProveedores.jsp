@@ -367,26 +367,7 @@
 								</td>
 							</tr>
 							</c:forEach> 
-							
-							<tr role="row" class="even">
-								<td class="sorting_1">Marcial</td>
-								<td>Senior Javascript Developer</td>
-								<td>Igme</td>
-								<td>21</td>
-								<td>2012/03/29</td>
-								<td>$433,060</td>
-								<td class="text-secondary text-xs font-weight-bold align-middle text-center">
-									<div class="dropdown">
-										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
-											<i class="ri-more-2-fill"></i>
-										</button>
-										<div class="dropdown-menu menu-dropdown-b" style="">
-											<a class="dropdown-item" href="#"><i class="ri-edit-line"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-line"></i> Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
+						
 						</tbody>
 						<tfoot>
 							<tr>
@@ -503,6 +484,7 @@
 			
 			$("tr #deleteData").click(function (e){
 				e.preventDefault();
+				
 				var cod = $(this).parent().find("#codigo").val();	
 				Swal.fire({
 					  title: '¿Estás seguro?',

@@ -73,11 +73,12 @@ public class ControladorCategoria extends HttpServlet {
 	private void eliminarCategoria(HttpServletRequest request, HttpServletResponse response) {
 		Categoria cat = new Categoria();
 		CrudCategoria crud = new CrudCategoria();
-		String id = request.getParameter("idC");
+		String id = request.getParameter("cod");
 		if(id != null){
 			cat.setIdCategoria(Integer.parseInt(id));
 			try {
 				crud.EliminarCategoria(cat);
+				System.out.println("seucces xxddd");
 				response.sendRedirect("ControladorCategoria?accion=listarCategorias");										
 				request.setAttribute("success","Eliminado correctamente");
 				
@@ -91,11 +92,11 @@ public class ControladorCategoria extends HttpServlet {
 	}
 
 	private void actualizarCategoria(HttpServletRequest request, HttpServletResponse response) {
-		String url="/RegistrarCategoria.jsp";
+		String url="/ActualizarCategoria.jsp";
 		Categoria cat = new Categoria();
 		CrudCategoria crud = new CrudCategoria();
 		
-		String id = request.getParameter("idC");
+		String id = request.getParameter("idCategoria");
 		String nombre = request.getParameter("nombreC");
 		String descripcion = request.getParameter("desC");
 		if(id != null){
@@ -104,7 +105,7 @@ public class ControladorCategoria extends HttpServlet {
 			cat.setDescripcion(descripcion);
 			try {
 				crud.ActualizarCategoria(cat);
-				response.sendRedirect("ControladorEquipo?accion=listarEquipos");	
+				response.sendRedirect("ControladorCategoria?accion=listarCategorias");	
 			} catch (Exception e) {
 				request.setAttribute("mensaje","No se pudo Actualizar " + e.getMessage());
 				System.out.println("No se realizó la actualización: " + e.getMessage());
@@ -124,9 +125,10 @@ public class ControladorCategoria extends HttpServlet {
 	}
 
 	private void leerCategoria(HttpServletRequest request, HttpServletResponse response) {
+		String url="/ActualizarCategoria.jsp";
 		Categoria cat = new Categoria();
 		CrudCategoria crud = new CrudCategoria();
-		String id = request.getParameter("codC");
+		String id = request.getParameter("cod");
 		if(id !=null){
 			cat.setIdCategoria(Integer.parseInt(id));
 			try {
@@ -139,9 +141,17 @@ public class ControladorCategoria extends HttpServlet {
 				}
 			} catch (Exception e) {
 				request.setAttribute("mensaje","No se pudo buscar  Alert" + e.getMessage());
+				System.out.println("No se realizó leer: " + e.getMessage());
 			}
 		}else{
 			request.setAttribute("mensaje","Se necesita  IdEmpleado");
+		}
+		try {
+			
+			this.getServletConfig().getServletContext().getRequestDispatcher(url).forward(request, response);
+		} catch (Exception e) {
+			request.setAttribute("mensaje","No se pudo realizar petición " + e.getMessage());
+			System.out.println("No se realizó peticion: " + e.getMessage());
 		}
 		
 	}

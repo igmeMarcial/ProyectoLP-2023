@@ -80,7 +80,7 @@ public class ControladorCrud extends HttpServlet {
 		Empleado em = new Empleado();
 		CrudEmpleado crud =new CrudEmpleado();
 		String id = request.getParameter("cod");
-		 System.out.println("id=> : "+ id);
+		 //System.out.println("id=> : "+ id);
 			
 		if(id != null){
 			

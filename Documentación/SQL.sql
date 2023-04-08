@@ -115,6 +115,17 @@ INSERT INTO `categoria` (`nombreCategoria`, `descripcion`) VALUES
 ( 'CATEGORIA B', 'SUELDO DE S/2000'),
 ( 'CATEGORIA C', 'SUELDO DE S/2800'),
 ( 'CATEGORIA D', 'SUELDO DE S/3200');
+INSERT INTO `categoria` (`nombreCategoria`, `descripcion`) VALUES
+('Electrónica', 'Productos electrónicos'),
+('Ropa', 'Prendas de vestir'),
+('Hogar', 'Artículos para el hogar'),
+('Deportes', 'Equipos y accesorios deportivos'),
+('Salud y belleza', 'Productos de cuidado personal'),
+('Juguetes', 'Juguetes y juegos para niños'),
+('Mascotas', 'Productos para mascotas'),
+('Alimentos y bebidas', 'Alimentos y bebidas'),
+('Automotriz', 'Productos y accesorios para vehículos'),
+('Libros y medios', 'Libros, películas y música');
 
 
 -- _____________________________________________successs_________________________________________

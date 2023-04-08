@@ -176,7 +176,7 @@
 							<a href="ControladorCategoria?accion=registrarCategoria"> <i class="bi bi-circle"></i><span>Agregar nuevo Categoria</span> </a>
 						</li>
 						<li>
-							<a href="ControladorCategoria?accion=registrarCategoria"> <i class="bi bi-circle"></i><span>Listar Categorias</span> </a>
+							<a href="ControladorCategoria?accion=listarCategorias"> <i class="bi bi-circle"></i><span>Listar Categorias</span> </a>
 						</li>
 					</ul>
 				</li>
