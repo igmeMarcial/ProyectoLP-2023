@@ -1,0 +1,11 @@
+package Dao;
+
+import Modelo.Inventario;
+
+public class TestCrudInventario {
+	Inventario in = new Inventario();
+	CrudInventario crud = new CrudInventario();
+	
+	
+	
+}

@@ -1,0 +1,41 @@
+package Dao;
+
+import java.util.List;
+
+import Interfaces.IntInventario;
+import Modelo.Inventario;
+
+public class CrudInventario implements IntInventario {
+
+	@Override
+	public void RegistrarInventario(Inventario in) {
+		
+		
+	}
+
+	@Override
+	public void ActualizarInventario(Inventario in) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void EliminarInventario(Inventario in) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Inventario> ListarEmpleados() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Inventario BuscarInventario(Inventario in) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+}

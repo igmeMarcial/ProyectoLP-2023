@@ -1,0 +1,70 @@
+package Dao;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import ConectarBD.ConectarBD;
+import Interfaces.IntInventario;
+import Modelo.Inventario;
+
+public class CrudInventario implements IntInventario {
+
+	@Override
+	public void RegistrarInventario(Inventario in) {
+		String sql="insert into inventario values(null,?,?,?,?)";
+		
+		PreparedStatement ps=null;
+		
+		try {
+			ps=ConectarBD.conexion().prepareStatement(sql);
+			
+			ps.setInt(1,in.getIdTicket());
+			ps.setInt(2,in.getIdCategoria());			
+			ps.setInt(3,in.getIdProveedor());
+			ps.setInt(4,in.getIdCategoria());
+			
+			
+			
+			
+			int y=ps.executeUpdate();
+			if(y>0){		
+				System.out.println("Inventario REGISTRADO en la BD correctamente");	
+			}else{
+				System.out.println("Inventario NO REGISTRADO en la BD");	
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Error al registar" + e.getMessage());	
+		}
+		
+	}
+
+	@Override
+	public void ActualizarInventario(Inventario in) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void EliminarInventario(Inventario in) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Inventario> ListarEmpleados() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Inventario BuscarInventario(Inventario in) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+}

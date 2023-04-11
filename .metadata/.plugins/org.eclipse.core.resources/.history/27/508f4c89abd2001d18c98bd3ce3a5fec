@@ -1,9 +1,0 @@
-package Interfaces;
-
-
-import Modelo.Usuario;
-
-public interface IntUsuario {
-	public void ActualizarUsuario(Usuario usu);
-	public Usuario BuscarUsuario(Usuario usu);
-}

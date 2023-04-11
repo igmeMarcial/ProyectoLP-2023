@@ -1,0 +1,57 @@
+package Dao;
+
+import java.util.Date;
+import java.util.List;
+
+import Modelo.Ticket;
+
+public class TestCrudTicket {
+
+	public static void main(String[] args) {
+		//INSTANCIAMOS LAS RESPECTIVAS CLASES
+
+		/////////////// TESTEO PARA AGREGAR //////////////////////
+		Ticket tk= new Ticket();
+		CrudTicket crud= new CrudTicket();
+		
+		tk.setNombre("Ticket 2");
+		tk.setTipo(1);
+		tk.setPrioridad("Alta");
+		tk.setCategoria("Redes");
+		tk.setFuenteSol("SEDE LURIN");
+		Date fecha=new Date();
+		Date fechasql=new Date(fecha.getTime());
+		tk.setFechaAper(fechasql);
+		tk.setFechaResol(fechasql);
+		tk.setIdDetAt(2);
+
+		crud.AgregarTicket(tk);
+		
+		////////////////////// TESTEANDO BUSCAR POR CODIGO
+		/*
+		System.out.println("************ BUSCANDO POR CODIGO ***************");
+		tk.setIdTicket(2);
+		Ticket codticket = crud.BuscarTicket(tk);*/
+		////////////// IMPRIMIR POR PANTALLA //////////////////////
+		/*System.out.println("CODIGO: "+codticket.getIdTicket()+"| NOMBRE: " + codticket.getNombre()+ "| TIPO: " + codticket.getTipo() + 
+		"| PRIORIDAD: "+ codticket.getPrioridad() + "| CATEGORIA:" +codticket.getCategoria() + "| FUENTE SOL: " + codticket.getFuenteSol()+
+		"| FECHA AP: " + codticket.getFechaAper()+ "| FECHA RS: " + codticket.getFechaResol() + "| ID AT: " + codticket.getIdDetAt());
+		*/
+		////////////////////////////////////////////////////////////////// TESTEO LISTAR TICKETS
+		/*
+		List<Ticket> listado = crud.ListarTickets();
+		for(Ticket list:listado){
+			
+			System.out.println("CODIGO: "+list.getIdTicket()+"| NOMBRE: " + list.getNombre()+ "| TIPO: " + list.getTipo() + 
+					"| PRIORIDAD: "+ list.getPrioridad() + "| CATEGORIA:" +list.getCategoria() + "| FUENTE SOL: " + list.getFuenteSol()+
+					"| FECHA AP: " + list.getFechaAper()+ "| FECHA RS: " + list.getFechaResol() + "| ID AT: " + list.getIdDetAt());
+		}
+		*/
+		
+		
+		
+		
+		}
+	
+
+}

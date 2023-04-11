@@ -1,0 +1,7 @@
+package Modelo;
+
+public class Inventario {
+	private int idTicket;
+	private int IdEquipo;
+	private int idProveedor;
+}

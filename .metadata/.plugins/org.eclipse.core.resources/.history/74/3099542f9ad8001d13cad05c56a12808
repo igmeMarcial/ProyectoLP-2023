@@ -1,0 +1,74 @@
+package Modelo;
+
+public class Inventario {
+	private int idTicket;
+	private int IdEquipo;
+	private int idProveedor;
+	private int idCategoria;
+	
+	
+	
+	public Inventario() {
+		
+	}
+
+
+
+	public Inventario(int idTicket, int idEquipo, int idProveedor, int idCategoria) {
+		super();
+		this.idTicket = idTicket;
+		IdEquipo = idEquipo;
+		this.idProveedor = idProveedor;
+		this.idCategoria = idCategoria;
+	}
+
+
+
+	public int getIdTicket() {
+		return idTicket;
+	}
+
+
+
+	public void setIdTicket(int idTicket) {
+		this.idTicket = idTicket;
+	}
+
+
+
+	public int getIdEquipo() {
+		return IdEquipo;
+	}
+
+
+
+	public void setIdEquipo(int idEquipo) {
+		IdEquipo = idEquipo;
+	}
+
+
+
+	public int getIdProveedor() {
+		return idProveedor;
+	}
+
+
+
+	public void setIdProveedor(int idProveedor) {
+		this.idProveedor = idProveedor;
+	}
+
+
+
+	public int getIdCategoria() {
+		return idCategoria;
+	}
+
+
+
+	public void setIdCategoria(int idCategoria) {
+		this.idCategoria = idCategoria;
+	}
+	
+	
+}

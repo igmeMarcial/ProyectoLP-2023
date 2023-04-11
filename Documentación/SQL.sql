@@ -127,24 +127,6 @@ INSERT INTO `categoria` (`nombreCategoria`, `descripcion`) VALUES
 ('Automotriz', 'Productos y accesorios para vehículos'),
 ('Libros y medios', 'Libros, películas y música');
 
-
--- _____________________________________________successs_________________________________________
-
-DROP TABLE IF EXISTS `detalleEquipo`;
-SET character_set_client = utf8mb4 ;
-CREATE TABLE `detalleEquipo` (
-  `iddetalleEquipo` int NOT NULL AUTO_INCREMENT,
-  `garantia` varchar(200) NOT NULL,
-  `unidadStock` smallint(6) NOT NULL DEFAULT '0',
-  `descripcion` text COLLATE utf8mb4_unicode_ci,
-  PRIMARY KEY (`iddetalleEquipo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-
--- exec correct
-
-
-
 DROP TABLE IF EXISTS `detalleAtencion`;
 SET character_set_client = utf8mb4 ;
 CREATE TABLE `detalleAtencion` (
@@ -157,6 +139,95 @@ CREATE TABLE `detalleAtencion` (
 
 
 
+
+DROP TABLE IF EXISTS `ticket`;
+ SET character_set_client = utf8mb4 ;
+ CREATE TABLE `ticket` (
+  `idTicket` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(75) COLLATE utf8mb4_unicode_ci NOT NULL,
+   `tipo` smallint(6) NOT NULL DEFAULT '0',
+  `prioridad` tinytext COLLATE utf8mb4_unicode_ci,
+    `categoria` varchar(200) NOT NULL,
+       `fuenteSol` varchar(200) NOT NULL,
+  `fechaApertura` datetime NOT NULL,
+  `fechaResulucion` datetime DEFAULT NULL,
+    `idDetalleAtencion`  int (11) not null,
+  PRIMARY KEY (`idTicket`),
+    CONSTRAINT `fk_empleado_detalle` FOREIGN KEY (`idDetalleAtencion`) REFERENCES `detalleAtencion` (`idDetalleAtencion`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+INSERT INTO `detalleatencion` (`estado`, `descripcion`) VALUES
+( 'Resuelto en Curso', 'Descriopcion de resuelto en curso'),
+('Cerrado en Espera', 'Descripcion de cerrado en espera');
+
+-- SELECT t.idTicket, t.nombre, t.tipo, t.prioridad, t.categoria, t.fuenteSol, t.fechaApertura, t.fechaResulucion, d.idDetalleAtencion as idDetalle, d.estado, d.descripcion FROM ticket t JOIN detalleAtencion d ON t.idDetalleAtencion = d.idDetalleAtencion WHERE t.idTicket= 1;
+-- SELECT t.idTicket, t.nombre, t.tipo, t.prioridad, t.categoria, t.fuenteSol, t.fechaApertura, t.fechaResulucion, d.idDetalleAtencion as idDetalle, d.estado, d.descripcion FROM ticket t JOIN detalleAtencion d ON t.idDetalleAtencion = d.idDetalleAtencion;
+
+DROP TABLE IF EXISTS `inventario`;
+ SET character_set_client = utf8mb4 ;
+ CREATE TABLE `inventario` (
+  `idInventario` int NOT NULL AUTO_INCREMENT,
+   `idTicket`  int (11) not null,
+    `idEquipo`  bigint(20)  not null,
+     `idProveedor`  int (11) not null,
+      `idCategoria`  int (11) not null,
+  PRIMARY KEY (`idInventario`),
+   CONSTRAINT `fk_empleado_ticket` FOREIGN KEY (`idTicket`) REFERENCES `ticket` (`idTicket`),
+    CONSTRAINT `fk_empleado_equipo` FOREIGN KEY (`idEquipo`) REFERENCES `equipo` (`idEquipo`),
+     CONSTRAINT `fk_empleado_proveedor` FOREIGN KEY (`idProveedor`) REFERENCES `proveedor` (`idProveedor`),
+      CONSTRAINT `fk_empleado_cate` FOREIGN KEY (`idCategoria`) REFERENCES `categoria` (`idCategoria`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- _____________________________________________successs_________________________________________
+
+
+
+
+-- exec correct
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DROP TABLE IF EXISTS `detalleEquipo`;
+SET character_set_client = utf8mb4 ;
+CREATE TABLE `detalleEquipo` (
+  `iddetalleEquipo` int NOT NULL AUTO_INCREMENT,
+  `garantia` varchar(200) NOT NULL,
+  `unidadStock` smallint(6) NOT NULL DEFAULT '0',
+  `descripcion` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`iddetalleEquipo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
 
@@ -180,36 +251,8 @@ DROP TABLE IF EXISTS `CDP`;
 
 
 
-DROP TABLE IF EXISTS `ticket`;
- SET character_set_client = utf8mb4 ;
- CREATE TABLE `ticket` (
-  `idTicket` int NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(75) COLLATE utf8mb4_unicode_ci NOT NULL,
-   `tipo` smallint(6) NOT NULL DEFAULT '0',
-  `prioridad` tinytext COLLATE utf8mb4_unicode_ci,
-    `categoria` varchar(200) NOT NULL,
-       `fuenteSol` varchar(200) NOT NULL,
-  `fechaApertura` datetime NOT NULL,
-  `fechaResulucion` datetime DEFAULT NULL,
-    `idDetalleAtencion`  int (11) not null,
-  PRIMARY KEY (`idTicket`),
-    CONSTRAINT `fk_empleado_detalle` FOREIGN KEY (`idDetalleAtencion`) REFERENCES `detalleAtencion` (`idDetalleAtencion`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS `inventario`;
- SET character_set_client = utf8mb4 ;
- CREATE TABLE `inventario` (
-  `idInventario` int NOT NULL AUTO_INCREMENT,
-   `idTicket`  int (11) not null,
-    `idEquipo`  int (11) not null,
-     `idProveedor`  int (11) not null,
-      `idCDP`  int (11) not null,
-  PRIMARY KEY (`idInventario`),
-   CONSTRAINT `fk_empleado_ticket` FOREIGN KEY (`idTicket`) REFERENCES `ticket` (`idTicket`),
-    CONSTRAINT `fk_empleado_equipo` FOREIGN KEY (`idEquipo`) REFERENCES `equipo` (`idEquipo`),
-     CONSTRAINT `fk_empleado_proveedor` FOREIGN KEY (`idProveedor`) REFERENCES `proveedor` (`idProveedor`),
-      CONSTRAINT `fk_empleado_cdp` FOREIGN KEY (`idCDP`) REFERENCES `CDP` (`idCDP`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 
 

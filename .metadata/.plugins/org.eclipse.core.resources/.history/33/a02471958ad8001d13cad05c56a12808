@@ -1,0 +1,115 @@
+package Modelo;
+
+import java.util.Date;
+
+public class Ticket {
+	
+	private int idTicket;
+	private String nombre;
+	private int tipo;
+	private String prioridad;
+	private String categoria;
+	private String fuenteSol;
+	private Date fechaAper;
+	private Date fechaResol;
+	private int idDetAt;
+	
+	private int idDetalleAtencion;
+	private String estado;
+	private String descripcion;
+	//CONSTRUCTOR VACIO
+	
+		public Ticket() {
+			
+		}//FIN CONSTRUCTOR VACIO
+	public Ticket(int idTicket, String nombre, int tipo, String prioridad, String categoria, String fuenteSol,
+			Date fechaAper, Date fechaResol, int idDetAt, int idDetalleAtencion, String estado, String descripcion) {
+		super();
+		this.idTicket = idTicket;
+		this.nombre = nombre;
+		this.tipo = tipo;
+		this.prioridad = prioridad;
+		this.categoria = categoria;
+		this.fuenteSol = fuenteSol;
+		this.fechaAper = fechaAper;
+		this.fechaResol = fechaResol;
+		this.idDetAt = idDetAt;
+		this.idDetalleAtencion = idDetalleAtencion;
+		this.estado = estado;
+		this.descripcion = descripcion;
+	}
+	public int getIdTicket() {
+		return idTicket;
+	}
+	public void setIdTicket(int idTicket) {
+		this.idTicket = idTicket;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public int getTipo() {
+		return tipo;
+	}
+	public void setTipo(int tipo) {
+		this.tipo = tipo;
+	}
+	public String getPrioridad() {
+		return prioridad;
+	}
+	public void setPrioridad(String prioridad) {
+		this.prioridad = prioridad;
+	}
+	public String getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+	public String getFuenteSol() {
+		return fuenteSol;
+	}
+	public void setFuenteSol(String fuenteSol) {
+		this.fuenteSol = fuenteSol;
+	}
+	public Date getFechaAper() {
+		return fechaAper;
+	}
+	public void setFechaAper(Date fechaAper) {
+		this.fechaAper = fechaAper;
+	}
+	public Date getFechaResol() {
+		return fechaResol;
+	}
+	public void setFechaResol(Date fechaResol) {
+		this.fechaResol = fechaResol;
+	}
+	public int getIdDetAt() {
+		return idDetAt;
+	}
+	public void setIdDetAt(int idDetAt) {
+		this.idDetAt = idDetAt;
+	}
+	public int getIdDetalleAtencion() {
+		return idDetalleAtencion;
+	}
+	public void setIdDetalleAtencion(int idDetalleAtencion) {
+		this.idDetalleAtencion = idDetalleAtencion;
+	}
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	public String getDescripcion() {
+		return descripcion;
+	}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+		
+	
+}
