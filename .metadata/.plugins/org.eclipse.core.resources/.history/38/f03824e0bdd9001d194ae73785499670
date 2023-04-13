@@ -71,17 +71,15 @@ public class CrudInventario implements IntInventario {
 			rs=ps.executeQuery();		
 			while(rs.next()){				
 				Inventario inven=new Inventario();
+				inven.setIdTicket(rs.getInt(1));
+				inven.setIdEquipo(rs.getInt(2));
+				inven.setIdProveedor(rs.getInt(3));
+				inven.setIdCategoria(rs.getInt(4));
 				
-				inven.setIdIventario(rs.getInt(1));
-				inven.setIdTicket(rs.getInt(2));
-				inven.setIdEquipo(rs.getInt(3));
-				inven.setIdProveedor(rs.getInt(4));
-				inven.setIdCategoria(rs.getInt(5));
-				
-				inven.setNombreTicket(rs.getString(6));
-				inven.setNombreEquipo(rs.getString(7));
-				inven.setRucProveedor(rs.getString(8));
-				inven.setNombreCategoria(rs.getString(9));
+				inven.setNombreTicket(rs.getString(5));
+				inven.setNombreEquipo(rs.getString(6));
+				inven.setRucProveedor(rs.getString(7));
+				inven.setNombreCategoria(rs.getString(8));
 				
 				listar.add(inven);	
 			} 

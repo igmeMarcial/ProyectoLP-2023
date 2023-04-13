@@ -183,7 +183,19 @@ DROP TABLE IF EXISTS `inventario`;
 -- _____________________________________________successs_________________________________________
 
 
+--SELECT inv.idInventario, t.idTicket, t.nombre AS nombreTicket, eq.idEquipo, eq.nombre AS nombreEquipo, p.idProveedor, p.ruc AS rucProveedor, c.idCategoria, c.nombreCategoria AS nombreCategoria
+FROM inventario inv
+JOIN ticket t ON t.idTicket = inv.idTicket
+JOIN equipo eq ON eq.idEquipo = inv.idEquipo
+JOIN proveedor p ON p.idProveedor = inv.idProveedor
+JOIN categoria c ON c.idCategoria = inv.idCategoria;
 
+--SELECT inv.idInventario, t.nombre AS nombreTicket, eq.nombre AS nombreEquipo, p.ruc AS rucProveedor, c.nombreCategoria AS nombreCategoria
+FROM inventario inv
+JOIN ticket t ON t.idTicket = inv.idTicket
+JOIN equipo eq ON eq.idEquipo = inv.idEquipo
+JOIN proveedor p ON p.idProveedor = inv.idProveedor
+JOIN categoria c ON c.idCategoria = inv.idCategoria;
 
 -- exec correct
 

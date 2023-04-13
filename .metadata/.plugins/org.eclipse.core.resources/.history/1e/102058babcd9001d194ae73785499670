@@ -1,7 +1,6 @@
 package Modelo;
 
 public class Inventario {
-	private int idIventario;
 	private int idTicket;
 	private int IdEquipo;
 	private int idProveedor;
@@ -16,10 +15,9 @@ public class Inventario {
 		
 	}
 
-	public Inventario(int idIventario, int idTicket, int idEquipo, int idProveedor, int idCategoria,
-			String nombreTicket, String nombreEquipo, String rucProveedor, String nombreCategoria) {
+	public Inventario(int idTicket, int idEquipo, int idProveedor, int idCategoria, String nombreTicket,
+			String nombreEquipo, String rucProveedor, String nombreCategoria) {
 		super();
-		this.idIventario = idIventario;
 		this.idTicket = idTicket;
 		IdEquipo = idEquipo;
 		this.idProveedor = idProveedor;
@@ -28,14 +26,6 @@ public class Inventario {
 		this.nombreEquipo = nombreEquipo;
 		this.rucProveedor = rucProveedor;
 		this.nombreCategoria = nombreCategoria;
-	}
-
-	public int getIdIventario() {
-		return idIventario;
-	}
-
-	public void setIdIventario(int idIventario) {
-		this.idIventario = idIventario;
 	}
 
 	public int getIdTicket() {
@@ -101,8 +91,6 @@ public class Inventario {
 	public void setNombreCategoria(String nombreCategoria) {
 		this.nombreCategoria = nombreCategoria;
 	}
-
-	
 
 
 
