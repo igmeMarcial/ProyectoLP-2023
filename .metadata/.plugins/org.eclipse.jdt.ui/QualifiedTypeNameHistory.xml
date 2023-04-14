@@ -28,9 +28,10 @@
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="Modelo.Ticket"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="Interfaces.IntInventario"/>
 <fullyQualifiedTypeName name="Modelo.Inventario"/>
+<fullyQualifiedTypeName name="Dao.CrudInventario"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="Modelo.Ticket"/>
 </qualifiedTypeNameHistroy>

@@ -72,28 +72,28 @@ public class CrudInventario implements IntInventario {
 			while(rs.next()){				
 				Inventario inven=new Inventario();
 				
-				inven.setIdIventario(rs.getInt(1));
+				inven.setIdInventario(rs.getInt(1));				
 				inven.setIdTicket(rs.getInt(2));
-				inven.setIdEquipo(rs.getInt(3));
-				inven.setIdProveedor(rs.getInt(4));
-				inven.setIdCategoria(rs.getInt(5));
-				
-				inven.setNombreTicket(rs.getString(6));
-				inven.setNombreEquipo(rs.getString(7));
-				inven.setRucProveedor(rs.getString(8));
+				inven.setNombreTicket(rs.getString(3));
+				inven.setIdEquipo(rs.getInt(4));
+				inven.setNombreEquipo(rs.getString(5));
+				inven.setIdProveedor(rs.getInt(6));
+				inven.setRucProveedor(rs.getString(7));
+				inven.setIdCategoria(rs.getInt(8));
 				inven.setNombreCategoria(rs.getString(9));
 				
 				listar.add(inven);	
 			} 
 		} catch (SQLException e) {		
-			e.printStackTrace();			
+			e.printStackTrace();	
+			 System.out.println("Error: " + e.getMessage());
 		} 		
 		return listar;	
 	}
 
 	@Override
 	public Inventario BuscarInventario(Inventario in) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 	

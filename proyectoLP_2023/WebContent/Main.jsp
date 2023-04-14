@@ -199,7 +199,7 @@
 					<a class="nav-link collapsed" data-bs-target="#inventory-nav" data-bs-toggle="collapse" href="#"> <i class="ri-todo-line"></i><span>Inventario</span><i class="ri-arrow-down-s-line ms-auto"></i> </a>
 					<ul id="inventory-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 						<li>
-							<a href="ControladorInventario?accion=registrarIventario"> <i class="bi bi-circle"></i><span>Agregar Inventario Nuevo</span> </a>
+							<a href="ControladorInventario?accion=registrarInventario"> <i class="bi bi-circle"></i><span>Agregar Inventario Nuevo</span> </a>
 						</li>
 						<li>
 							<a href="ControladorInventario?accion=listarInventarios"> <i class="bi bi-circle"></i><span>Listar Inventarios</span> </a>

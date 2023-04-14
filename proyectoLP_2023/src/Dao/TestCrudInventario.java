@@ -1,5 +1,7 @@
 package Dao;
 
+import java.util.List;
+
 import Modelo.Inventario;
 
 public class TestCrudInventario {
@@ -13,5 +15,13 @@ public class TestCrudInventario {
 	in.setIdProveedor(1);
 	
 	//crud.RegistrarInventario(in);
+	
+	List<Inventario> listado = crud.ListarInventarios();
+	for(Inventario list:listado){
+		System.out.println("*****LISTANDO******" + " ID: "+ list.getIdInventario()+
+				"| NOMBRETicket: " + list.getNombreTicket()+ " | EQUIPO: " +
+	list.getIdEquipo() + "Categoria: " + list.getNombreCategoria());
+	}
+	
 	}
 }
