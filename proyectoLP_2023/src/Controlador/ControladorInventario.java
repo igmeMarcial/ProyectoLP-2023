@@ -97,7 +97,37 @@ public class ControladorInventario extends HttpServlet {
 	}
 
 	private void registrarNuevoInventario(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
+		Inventario in = new Inventario();
+		CrudInventario crud = new CrudInventario();
+		
+		String ticket = request.getParameter("ticket");
+		String equipo = request.getParameter("equipo");
+		String proveedor = request.getParameter("proveedor");
+		String categoria = request.getParameter("categoria");
+								
+		if(ticket !=null  
+			&& equipo != null
+			&& proveedor != null
+			&& categoria != null){
+			
+			in.setIdTicket(Integer.parseInt(ticket));
+			in.setIdCategoria(Integer.parseInt(categoria));
+			in.setIdEquipo(Integer.parseInt(equipo));
+			in.setIdProveedor(Integer.parseInt(proveedor));
+			try {
+				crud.RegistrarInventario(in);
+				response.sendRedirect("ControladorInventario?accion=listarInventarios");				
+			} catch (Exception e) {
+				request.setAttribute("mensaje","No se pudo registrar Empleado " + e.getMessage());
+				System.out.println("No se realizó el registro: " + e.getMessage());
+				 request.setAttribute("empleado",in);
+				 this.registrarInventario(request,response);
+			}
+			
+		}else{
+			System.out.println("Es obligatorio el id ");
+		}
+		
 		
 	}
 	private void listarEquipo(HttpServletRequest request) {
@@ -143,9 +173,17 @@ public class ControladorInventario extends HttpServlet {
 		
 		CrudTicket crud= new CrudTicket();
 		List<Ticket> listadoProv=crud.ListarTicketsTodo();
+		for(Ticket list:listadoProv){
 			
+			System.out.println("CODIGO: "+list.getIdTicket()+"| NOMBRE: " + list.getNombre()+ "| TIPO: " + list.getTipo() + 
+					"| PRIORIDAD: "+ list.getPrioridad() + "| CATEGORIA:" +list.getCategoria() + "| FUENTE SOL: " + list.getFuenteSol()+
+					"| FECHA AP: " + list.getFechaAper()+ "| FECHA RS: " + list.getFechaResol() + "| ID AT: " + list.getIdDetAt() +
+					"| estado: " + list.getEstado() + "| dewcripcion: " + list.getDescripcion()
+					);
+		}
 			try {
 				request.setAttribute("listadoTicket",listadoProv);
+				
 			} catch (Exception e) {
 				 request.setAttribute("mensaje","No se puede listar" + e.getMessage());
 				 System.out.println("No se puede listar: " + e.getMessage());

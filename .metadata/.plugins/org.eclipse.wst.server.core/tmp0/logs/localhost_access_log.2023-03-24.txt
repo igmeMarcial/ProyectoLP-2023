@@ -1,7 +1,0 @@
-0:0:0:0:0:0:0:1 - - [24/Mar/2023:00:27:10 -0500] "GET /proyectoLP_2023/ControladorCrud?accion=listarEmpleados HTTP/1.1" 200 38264
-0:0:0:0:0:0:0:1 - - [24/Mar/2023:00:27:26 -0500] "GET /proyectoLP_2023/ControladorCrud?accion=registrarEmpleado HTTP/1.1" 200 22418
-0:0:0:0:0:0:0:1 - - [24/Mar/2023:00:27:26 -0500] "GET /proyectoLP_2023/css/nuevoEmpleado.css HTTP/1.1" 304 -
-0:0:0:0:0:0:0:1 - - [24/Mar/2023:00:27:26 -0500] "GET /resources/demos/style.css HTTP/1.1" 404 1052
-0:0:0:0:0:0:0:1 - - [24/Mar/2023:00:28:31 -0500] "GET /proyectoLP_2023/ControladorCrud?accion=listarEmpleados HTTP/1.1" 200 38264
-0:0:0:0:0:0:0:1 - - [24/Mar/2023:00:36:22 -0500] "GET /proyectoLP_2023/ControladorCrud?accion=listarEmpleados HTTP/1.1" 200 38264
-0:0:0:0:0:0:0:1 - - [24/Mar/2023:00:37:16 -0500] "GET /proyectoLP_2023/ControladorCrud?accion=listarEmpleados HTTP/1.1" 200 38264

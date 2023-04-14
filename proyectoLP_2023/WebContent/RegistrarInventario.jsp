@@ -387,8 +387,8 @@
 									<div class="mb-3">
 										<label class="form-label" for="prov">Proveedor:</label>
 											<select id="prov" name="proveedor"  aria-label="Default select example" required>
-												<c:forEach items="${istadoProv}" var="prov">											  		
-												  <option value="${prov.idProveedor}"> ${cargo.ruc}</option>
+												<c:forEach items="${listadoProv}" var="prov">											  		
+												  <option value="${prov.idProveedor}"> ${prov.ruc}</option>
 												</c:forEach>										  
 											</select>								    
 									</div>
@@ -421,7 +421,7 @@
 										<label class="form-label" for="ticket">Ticket:</label>
 											<select id="ticket" name="ticket"  aria-label="Default select example" required>
 												<c:forEach items="${listadoTicket}" var="ti">											  		
-												  <option value="${ti.idTicket}"> ${cargo.nombre}</option>
+												  <option value="${ti.idTicket}"> ${ti.nombre}</option>
 												</c:forEach>										  
 											</select>								    
 									</div>
