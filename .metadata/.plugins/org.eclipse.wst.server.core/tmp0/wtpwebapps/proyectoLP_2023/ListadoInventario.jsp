@@ -330,6 +330,9 @@
 								<th class="sorting th-title text-uppercase text-xs font-weight-bold opacity-7 " tabindex="0" aria-controls="data-table-basic" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 145px;">Equipo</th>
 								<th class="sorting th-title text-uppercase text-xs font-weight-bold opacity-7 " tabindex="0" aria-controls="data-table-basic" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 150px;">Proveedor</th>
 								<th class="sorting th-title text-uppercase text-xs font-weight-bold opacity-7 " tabindex="0" aria-controls="data-table-basic" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 180px;">Categoria</th>
+								<th class="sorting th-title text-uppercase text-xs font-weight-bold opacity-7 " tabindex="0" aria-controls="data-table-basic" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 100px;">Stock Inicial</th>
+								<th class="sorting th-title text-uppercase text-xs font-weight-bold opacity-7 " tabindex="0" aria-controls="data-table-basic" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 40px;">Salidas</th>
+								<th class="sorting th-title text-uppercase text-xs font-weight-bold opacity-7 " tabindex="0" aria-controls="data-table-basic" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 40px;">Total</th>
 								
 								<th class="sorting th-title text-uppercase text-xs font-weight-bold opacity-7 " tabindex="0" aria-controls="data-table-basic" rowspan="1" colspan="1" aria-label="action: activate to sort column ascending" style="width: 50px;">Actions</th>
 							</tr>
@@ -343,6 +346,9 @@
 								<td class="text-secondary text-dark  font-weight-bold"><c:out value="${inventario.nombreEquipo}"></c:out></td>
 								<td class="text-secondary text-dark font-weight-bold"><c:out value="${inventario.rucProveedor}"></c:out></td>
 								<td class="text-secondary text-dark font-weight-bold"><c:out value="${inventario.nombreCategoria}"></c:out></td>
+								<td class="text-secondary text-dark font-weight-bold"><c:out value="${inventario.stockInicial}"></c:out></td>
+								<td class="text-secondary text-dark font-weight-bold"><c:out value="${inventario.salidas}"></c:out></td>
+								<td class="text-secondary text-dark font-weight-bold"><c:out value="${inventario.total}"></c:out></td>
 								<td class="text-secondary text-dark font-weight-bold align-middle text-center">
 									<div class="dropdown">
 										<button type="button" class="btn p-0 hide-arrow btn-editList" data-bs-toggle="dropdown" aria-expanded="false">
@@ -352,14 +358,14 @@
 												<a class="dropdown-item" href="
 																<c:url value="ControladorInventario">
 															      <c:param name="accion" value="leerInventario" />
-															 <c:param name="codPro" value="${inventario.idInventario}" />
+															 <c:param name="codI" value="${inventario.idInventario}" />
 															     </c:url>"><i class="ri-edit-line"></i> Editar
 															                                                   
 												</a>
 											<input type="hidden" id="codigo"  value="${inventario.idInventario}">
 															<a id="deleteData" class="dropdown-item" href="<c:url value="ControladorInventario">
 															<c:param name="accion" value="eliminarInventario"/> 
-															<c:param  name="cod" value="${proveedor.idProveedor}"/>
+															<c:param  name="cod" value="${inventario.idInventario}"/>
 											</c:url>"><i class="ri-delete-bin-line"></i> Eliminar</a>
 										</div>
 									</div>
@@ -375,6 +381,9 @@
 								<th rowspan="1" colspan="1" class="th-footer">Nombre Equipo</th>
 								<th rowspan="1" colspan="1" class="th-footer">RUC Proveedor</th>
 								<th rowspan="1" colspan="1" class="th-footer">Nombre Categoria</th>
+								<th rowspan="1" colspan="1" class="th-footer">Stock Inicial</th>
+								<th rowspan="1" colspan="1" class="th-footer">Salidas</th>
+								<th rowspan="1" colspan="1" class="th-footer">Total</th>
 		
 								<th rowspan="1" colspan="1" class="th-footer">Filtrar</th>
 							</tr>

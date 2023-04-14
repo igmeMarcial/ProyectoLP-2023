@@ -13,7 +13,7 @@ public class TestCrudEmpleado {
 		Empleado em = new Empleado();
 		CrudEmpleado crud= new CrudEmpleado();
 		
-		
+		/*
 		em.setNombre("Maribel");
 		em.setApellidos("Maza");
 		em.setSexo("F");
@@ -26,8 +26,8 @@ public class TestCrudEmpleado {
 		em.setCelular("34444444");
 		em.setEmail("elvato@gmail.com");
 		em.setCargo(1);
-		
-		crud.RegistrarEmpleado(em);
+		*/
+		//crud.RegistrarEmpleado(em);
 		/*
 		em.setIdEmpleado(13);
 		em.setNombre("Nuevo");
@@ -44,6 +44,16 @@ public class TestCrudEmpleado {
 		
 		crud.ActualizarEmpleado(em);
 		*/
+		/*
+		em.setIdEmpleado(1);
+		em.setCelular("964350071");
+		crud.ActualizarEmpleado(em);
+		*/
+		em.setIdEmpleado(1);
+		Empleado codcate=crud.BuscarEmpleado(em);
+		//imprimir en pantalla
+		System.out.println("*****BUSQUEDA******" + " ID: "+ codcate.getIdEmpleado()+"| NOMBRE: " + codcate.getNombre()+ " | DESCRIPCCIÓN: " +
+					codcate.getEmail());
 		
 	}
 

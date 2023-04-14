@@ -9,6 +9,10 @@ CREATE TABLE `usuario` (
   `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+INSERT INTO `usuario`(`userName`,`password`, `email`	)VALUES
+('igme','chanchito','igmemarcial@gmail.com'),
+('admin','123','admin@gmail.com');
+
 CREATE TABLE `cargo` (
   `idCargo` int (11) not null,
   `NombreCargo` varchar(20) DEFAULT NULL,

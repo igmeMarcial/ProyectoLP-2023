@@ -174,12 +174,16 @@ public class ControladorCrud extends HttpServlet {
 		CrudEmpleado crud = new CrudEmpleado();
 		Empleado em = new Empleado();
 		String id = request.getParameter("cod");
+		
+		 //System.out.println("id=> : "+ id);
+		
 		if(id !=null){
 			em.setIdEmpleado(Integer.parseInt(id));
 			try {
 				em = crud.BuscarEmpleado(em);
+				//System.out.println("===========>"+ em.getNombre());
 				if(em != null){
-					request.setAttribute("getProveedor",em);
+					request.setAttribute("getEmpleado",em);
 					
 				}else{
 					 request.setAttribute("mensaje","No se pudo buscar Empleado");

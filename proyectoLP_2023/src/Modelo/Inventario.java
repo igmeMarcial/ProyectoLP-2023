@@ -7,6 +7,10 @@ public class Inventario {
 	private int idProveedor;
 	private int idCategoria;
 	
+	private int stockInicial;
+	private int salidas;
+	private int total;
+	
 	private String nombreTicket;
 	private String nombreEquipo;
 	private String rucProveedor;
@@ -16,14 +20,18 @@ public class Inventario {
 		
 	}
 
-	public Inventario(int idInventario, int idTicket, int idEquipo, int idProveedor, int idCategoria,
-			String nombreTicket, String nombreEquipo, String rucProveedor, String nombreCategoria) {
+	public Inventario(int idInventario, int idTicket, int idEquipo, int idProveedor, int idCategoria, int stockInicial,
+			int salidas, int total, String nombreTicket, String nombreEquipo, String rucProveedor,
+			String nombreCategoria) {
 		super();
 		this.idInventario = idInventario;
 		this.idTicket = idTicket;
 		IdEquipo = idEquipo;
 		this.idProveedor = idProveedor;
 		this.idCategoria = idCategoria;
+		this.stockInicial = stockInicial;
+		this.salidas = salidas;
+		this.total = total;
 		this.nombreTicket = nombreTicket;
 		this.nombreEquipo = nombreEquipo;
 		this.rucProveedor = rucProveedor;
@@ -70,6 +78,30 @@ public class Inventario {
 		this.idCategoria = idCategoria;
 	}
 
+	public int getStockInicial() {
+		return stockInicial;
+	}
+
+	public void setStockInicial(int stockInicial) {
+		this.stockInicial = stockInicial;
+	}
+
+	public int getSalidas() {
+		return salidas;
+	}
+
+	public void setSalidas(int salidas) {
+		this.salidas = salidas;
+	}
+
+	public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
+	}
+
 	public String getNombreTicket() {
 		return nombreTicket;
 	}
@@ -102,6 +134,7 @@ public class Inventario {
 		this.nombreCategoria = nombreCategoria;
 	}
 
+	
 	
 
 

@@ -8,20 +8,31 @@ public class TestCrudInventario {
 	public static void main(String[] args) {
 	Inventario in = new Inventario();
 	CrudInventario crud = new CrudInventario();
-	
+	/*
 	in.setIdTicket(1);
 	in.setIdCategoria(1);
 	in.setIdEquipo(1);
 	in.setIdProveedor(1);
 	
-	//crud.RegistrarInventario(in);
+	in.setStockInicial(50);
+	in.setSalidas(20);
+	in.setTotal(30);
+	*/
 	
+	//crud.RegistrarInventario(in);
+	/*
 	List<Inventario> listado = crud.ListarInventarios();
 	for(Inventario list:listado){
 		System.out.println("*****LISTANDO******" + " ID: "+ list.getIdInventario()+
 				"| NOMBRETicket: " + list.getNombreTicket()+ " | EQUIPO: " +
 	list.getIdEquipo() + "Categoria: " + list.getNombreCategoria());
 	}
-	
+	*/
+	in.setIdInventario(4);
+	/*
+	Inventario s = crud.BuscarInventario(in);
+	System.out.println("cod: " + s.getIdInventario() + " total : " + s.getTotal());
+	*/
+	crud.EliminarInventario(in);
 	}
 }

@@ -388,7 +388,7 @@
 										<label class="form-label" for="prov">Proveedor:</label>
 											<select id="prov" name="proveedor"  aria-label="Default select example" required>
 												<c:forEach items="${listadoProv}" var="prov">											  		
-												  <option value="${prov.idProveedor}"> ${prov.ruc}</option>
+												  <option value="${prov.idProveedor}"> ${prov.razonSocial}</option>
 												</c:forEach>										  
 											</select>								    
 									</div>
@@ -417,7 +417,27 @@
 												</c:forEach>										  
 											</select>								    
 									</div>
-								
+									<div class="mb-3">
+										<label class="form-label" for="stockInicial">Stock Inicial</label>
+										<div class="input-group input-group-merge">
+											<span id="basic-icon-default-fullname2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
+											<input name="stockInicial" type="number" class="form-control inputCustom borderColorInput" id="stockInicial" placeholder="Stock Inicial" aria-label="apellido" aria-describedby="basic-icon-default-fullname2" required/>
+										</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="salidas">Salidas</label>
+										<div class="input-group input-group-merge">
+											<span id="basic-icon-default-fullname2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
+											<input name="salidas" type="number" class="form-control inputCustom borderColorInput" id="salidas" placeholder="Salidas" aria-label="apellido" aria-describedby="basic-icon-default-fullname2" required/>
+										</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="total">Total</label>
+										<div class="input-group input-group-merge">
+											<span id="basic-icon-default-fullname2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
+											<input name="total" type="number" class="form-control inputCustom borderColorInput" id="total" placeholder="Total" aria-label="apellido" aria-describedby="basic-icon-default-fullname2" required/>
+										</div>
+									</div>
 									
 								
 									<button id="submitRegister" type="submit" class="btn btn-primary">Registrar</button>
