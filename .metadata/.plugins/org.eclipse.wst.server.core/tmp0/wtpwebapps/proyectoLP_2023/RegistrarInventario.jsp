@@ -408,15 +408,7 @@
 												</c:forEach>										  
 											</select>								    
 									</div>									
-									<div class="mb-3">
-										<label class="form-label" for="emailNuevo">Email</label>
-										<div class="input-group input-group-merge">
-											<span class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input name="emailNuevo" type="text" id="emailNuevo" class="form-control inputCustom borderColorInput " placeholder="ejemplo.@gmail.com" aria-label="example.gmail.com" aria-describedby="basic-icon-default-email2" required/>
-											<span id="basic-icon-default-email2" class="input-group-text labelCustomEmail borderColorInput">@example.com</span>
-										</div>
-										<div class="form-text">Puedes usar letras, números puntos</div>
-									</div>
+									
 									<div class="mb-3">
 										<label class="form-label" for="ticket">Ticket:</label>
 											<select id="ticket" name="ticket"  aria-label="Default select example" required>

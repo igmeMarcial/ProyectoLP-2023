@@ -52,17 +52,31 @@
 		    $( "#menuSelect" ).selectmenu();
 		    $("#getFechaCompleted").flatpickr({ dateFormat: 'Y/m/d'});
 		   
-		    $("#selectMenuForm").selectize({
+		    $("#prov").selectize({
 		    	  plugins: {
 		    	    dropdown_header: {
-		    	        title: 'Selecciona TIPO:'
+		    	        title: 'Selecciona Proveedor:'
 		    	    }
 		    	  },
 		    	});
-		    $("#cargoNuevo").selectize({
+		    $("#equipo").selectize({
 		    	  plugins: {
 		    	    dropdown_header: {
-		    	        title: 'Selecciona cargo:'
+		    	        title: 'Selecciona Equipo:'
+		    	    }
+		    	  },
+		    	});
+		    $("#categoria").selectize({
+		    	  plugins: {
+		    	    dropdown_header: {
+		    	        title: 'Selecciona Categoria:'
+		    	    }
+		    	  },
+		    	});
+		    $("#ticket").selectize({
+		    	  plugins: {
+		    	    dropdown_header: {
+		    	        title: 'Selecciona Ticket:'
 		    	    }
 		    	  },
 		    	});
@@ -359,7 +373,7 @@
 <main id="main" class="main main-nuevoEmpleado">
 	<div class="content-wrapper">
 		<div class="container-xxl flex-grow-1 container-p-y">
-			<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Registrar/</span> Equipo</h4>
+			<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Registrar/</span>Nuevo Inventario</h4>
 			<div class="container-fluid py-4 responsive-container">
 				<div class="row">
 					<div class="col-xl">
@@ -369,54 +383,51 @@
 								<small class="text-muted float-end">Default</small>
 							</div>
 							<div class="card-body">
-								<form action="ControladorEquipo?accion=nuevoEquipo" method="post">
+								<form action="ControladorInventario?accion=nuevoInventario" method="post">
 									<div class="mb-3">
-										<label class="form-label" for="nombreNuevo">Nombre</label>
-										<div class="input-group input-group-merge">
-											<span id="basic-icon-default-fullname2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input name="nombreE" type="text" class="form-control inputCustom borderColorInput" id="nombreNuevo" placeholder="Nombre" aria-label="Marcial" aria-describedby="basic-icon-default-fullname"  required/>
-											<div class="valid-feedback">
-										      Looks good!
-										    </div>
-										</div>
+										<label class="form-label" for="prov">Proveedor:</label>
+											<select id="prov" name="proveedor"  aria-label="Default select example" required>
+												<c:forEach items="${listadoProv}" var="prov">											  		
+												  <option value="${prov.idProveedor}"> ${prov.ruc}</option>
+												</c:forEach>										  
+											</select>								    
 									</div>
 									<div class="mb-3">
-										<label class="form-label" for="apellidosNuevo">Marca</label>
-										<div class="input-group input-group-merge">
-											<span id="basic-icon-default-fullname2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input name="marcaE" type="text" class="form-control inputCustom borderColorInput" id="apellidosNuevo" placeholder="Marca" aria-label="apellido" aria-describedby="basic-icon-default-fullname2" required/>
-										</div>
+										<label class="form-label" for="equipo">Equipo:</label>
+											<select id="equipo" name="equipo"  aria-label="Default select example" required>
+												<c:forEach items="${listadoEquipos}" var="equipo">											  		
+												  <option value="${equipo.idEquipo}"> ${equipo.nombre}</option>
+												</c:forEach>										  
+											</select>								    
 									</div>
 									<div class="mb-3">
-										<label class="form-label" for="MODELONuevo">Modelo</label>
+										<label class="form-label" for="categoria">Categoria:</label>
+											<select id="categoria" name="categoria"  aria-label="Default select example" required>
+												<c:forEach items="${listadoCategorias}" var="cat">											  		
+												  <option value="${cat.idCategoria}"> ${cat.nombreCategoria}</option>
+												</c:forEach>										  
+											</select>								    
+									</div>									
+									<div class="mb-3">
+										<label class="form-label" for="emailNuevo">Email</label>
 										<div class="input-group input-group-merge">
-											<span id="basic-icon-default-fullname2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input name="modeloE" type="text" class="form-control inputCustom borderColorInput" id="MODELONuevo" placeholder="Modelo" aria-label="apellido" aria-describedby="basic-icon-default-fullname2" required/>
+											<span class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
+											<input name="emailNuevo" type="text" id="emailNuevo" class="form-control inputCustom borderColorInput " placeholder="ejemplo.@gmail.com" aria-label="example.gmail.com" aria-describedby="basic-icon-default-email2" required/>
+											<span id="basic-icon-default-email2" class="input-group-text labelCustomEmail borderColorInput">@example.com</span>
 										</div>
+										<div class="form-text">Puedes usar letras, números puntos</div>
 									</div>
 									<div class="mb-3">
-										<label class="form-label" for="selectMenuForm">Tipo:</label>
-										<select id="selectMenuForm" name="tipoE" aria-label="Default select" required>
-										  <option value="1" selected>Tipo1</option>
-										  <option value="2" selected>Tipo2</option>
-										  
-										</select>																	    
-									</div>							
+										<label class="form-label" for="ticket">Ticket:</label>
+											<select id="ticket" name="ticket"  aria-label="Default select example" required>
+												<c:forEach items="${listadoTicket}" var="ti">											  		
+												  <option value="${ti.idTicket}"> ${ti.nombre}</option>
+												</c:forEach>										  
+											</select>								    
+									</div>
+								
 									
-									<div class="mb-3">
-										<label class="form-label labelCustom" for="SERIENuevo" >Serie</label>
-										<div class="input-group input-group-merge">
-											<span id="SERIENuevo" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input name="serieE" type="text" id="basic-icon-default-phone" class="form-control phone-mask inputCustom borderColorInput" placeholder="123456" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone" required/>
-										</div>
-									</div>
-									<div class="mb-3">
-										<label class="form-label labelCustom" for="IPNuevo">IP</label>
-										<div class="input-group input-group-merge">
-											<span id="basic-icon-default-phone2" class="input-group-text labelCustom borderColorInput"><i class="ri-folder-add-line"></i></span>
-											<input name="ipE" type="text" id="IPNuevo" class="form-control phone-mask inputCustom borderColorInput" placeholder="192.168.0.1" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2" required/>
-										</div>
-									</div>														
+								
 									<button id="submitRegister" type="submit" class="btn btn-primary">Registrar</button>
 								</form>
 							</div>
